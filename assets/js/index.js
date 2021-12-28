@@ -1,3 +1,8 @@
+var URL = window.location.host;
+if(URL == null){
+    URL = 'localhost:3001'
+}
+
 $("#add_report").submit(function(event){
     event.preventDefault();
 
@@ -135,7 +140,7 @@ $("#update_report").submit(function(event){
 
 $("#update_person").submit(function(event){
     event.preventDefault();
-    var URL = window.location.host;
+    
     var unindexed_array=$(this).serializeArray();
     console.log(unindexed_array);
     var data = {}

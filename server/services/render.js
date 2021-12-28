@@ -1,5 +1,7 @@
 const axios = require('axios')
 
+
+
 exports.homeRoutes = (req, res)=>{
     //Make a get request to /api/reports
     axios.get('http://localhost:3001/api/persons')
@@ -64,7 +66,8 @@ exports.add_person = (req, res)=>{
 }
 
 exports.update_person = (req, res)=>{
-    axios.get('http://sagyt.unab.edu.pe/api/persons', {params:{id:req.query.id}})
+    var URL = window.location.host;
+    axios.get('http://${URL}/api/persons', {params:{id:req.query.id}})
         .then(function(persondata){
             res.render("update_person", {person:persondata.data})
         })

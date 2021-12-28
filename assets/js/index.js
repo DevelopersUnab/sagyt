@@ -135,7 +135,7 @@ $("#update_report").submit(function(event){
 
 $("#update_person").submit(function(event){
     event.preventDefault();
-
+    var URL = window.location.host;
     var unindexed_array=$(this).serializeArray();
     console.log(unindexed_array);
     var data = {}
@@ -147,7 +147,7 @@ $("#update_person").submit(function(event){
     console.log(data);
 
     var request = {
-        "url" : `http://sagyt.unab.edu.pe/api/persons/${data.id}`,
+        "url" : `http://${URL}/api/persons/${data.id}`,
         "method" : "PUT",
         "data": data
     }

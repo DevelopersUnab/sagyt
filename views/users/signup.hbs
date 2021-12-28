@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card mt-4 text-center">
+            <div class="card-header">
+                <h1 class="h4">
+                    Registrar Cuenta
+                </h1>
+            </div>
+            <img class="mx-auto mt-4 logo" src="/img/logo.png" alt="Logo">
+            <div class="card-body">
+                <form action="/users/signup" method="POST">
+                    <div class="mt-3 input-group has-validation">
+                        <select class="input-group-text" name="type_document" value="{{type_document}}">
+                            <option value="">Doc.</option>
+                            <option value="DNI">DNI</option>
+                            <option value="CE">CE</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                        <input type="text" class="form-control" name="document" placeholder="Numero Documento" pattern="([0-9][ -]*){9}" value="{{document}}">
+                    </div>
+                    <div class="mt-3">
+                        <input type="text" class="form-control" name="surname_pat" placeholder="Apellido Paterno" value="{{surname_pat}}">
+                    </div>
+                    <div class="mt-3">
+                        <input type="text" class="form-control" name="surname_mat" placeholder="Apellido Materno" value="{{surname_mat}}">
+                    </div>
+                    <div class="mt-3">
+                        <input type="text" class="form-control" name="first_names" placeholder="Nombres" value="{{first_names}}">
+                    </div>
+                    <div class="mt-3">
+                        <select class="form-control text-center" name="area" value="{{area}}">
+                            <option value="">Elije un Área</option>
+                            <option value="DISA">DISA</option>
+                            <option value="FISICA">FISICA</option>
+                            <option value="BIBLIOTECA">BIBLIOTECA</option>
+                        </select>
+                    </div>
+                    {{!-- <div class="mt-3">
+                        <input type="text" class="form-control" name="area" placeholder="Área" value="{{area}}">
+                    </div> --}}
+                    <div class="mt-3">
+                        <input type="email" class="form-control" name="email" placeholder="Email" value="{{email}}">
+                    </div>
+                    <div class="mt-3">
+                        <input type="password" class="form-control" name="password" placeholder="Password" value="{{password}}">
+                    </div>
+                    <div class="mt-3">
+                        <input type="password" class="form-control" name="confirm_password" placeholder="Confirmar Password" value="{{confirm_password}}">
+                    </div>
+                    <div class="mt-3 d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2">
+                            Register
+                        </button>
+                        {{!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+                            Default
+                        </button> --}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

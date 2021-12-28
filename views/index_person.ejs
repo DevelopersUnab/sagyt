@@ -1,0 +1,475 @@
+<!-- header -->
+<%- include('include/_header')%>
+<!-- header -->
+
+    <!-- Main Site -->
+
+    <!-- se rempleza <main id="site-main"></main> *POR ARTICLE -->
+                <!-- <div class="container">
+                        <div class="gridopt d-flex">
+                            <div class="d-gridmain">
+                                <div>
+                                    <a href="/add-report?id=<%= persons._id %>" class="opt upgrad" title="egresados"
+                                        data-id=<%=persons._id %>>
+                                        <span class="text-gradient galery text-center"><i
+                                                class="fas fa-graduation-cap"></i></span>
+                                        <span class="galerytext text-gradient">Reporte de Egresado</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="d-gridopt">
+                                <div class="d-gridoptsub">
+                                    <a href="/view-graduate?document_number=<%= persons.document_number %>" class="opt">
+                                        <span class="text-gradient galerysub text-center"><i class="fas fa-eye"></i></span>
+                                    </a>
+                                </div>
+
+                                <div class="d-gridoptsub">
+                                    <a href="/update-graduate?document_number=<%= persons.document_number %>" class="opt">
+                                        <span class="text-gradient galerysub text-center"><i
+                                                class="fas fa-pencil-alt"></i></span>
+                                    </a>
+                                </div>
+
+                                <div class="d-gridoptsub">
+                                    <a href="add_support_approval.html" class="opt">
+                                        <span class="text-gradient galerysub text-center"><i class="fas fa-times"></i></span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                </div> -->
+                
+                <!-- Sustentación -->
+                    <!-- <div class="gridopt d-flex">
+                        <div class="d-gridmain">
+                            <div>
+                                <a href="/add-approval?id=<%= persons._id %>" class="opt upapproval" title="egresados" data-id=<%=persons._id %>>
+                                    <span class="text-gradient galery text-center"><i class="fas fa-file"></i></span>
+                                    <span class="galerytext text-gradient">Reporte de Sustentación</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-gridopt">
+                            <div class="d-gridoptsub">
+                                <a href="" class="opt">
+                                    <span class="text-gradient galerysub text-center"><i class="fas fa-eye"></i></span>
+                                </a>
+                            </div>
+
+                            <div class="d-gridoptsub">
+                                <a href="add_support_approval.html" class="opt">
+                                    <span class="text-gradient galerysub text-center"><i
+                                            class="fas fa-pencil-alt"></i></span>
+                                </a>
+                            </div>
+
+                            <div class="d-gridoptsub">
+                                <a href="add_support_approval.html" class="opt">
+                                    <span class="text-gradient galerysub text-center"><i class="fas fa-times"></i></span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div> -->
+                <!-- Sustentación -->
+
+                <!-- CINTA ORIGINAL -->
+                    <!-- <div class="box-nav d-flex justify-between">
+                    <a href="/add-report?id=<%= persons._id %>" class="btn border-shadow upgrad opt" title="egresados" data-id=<%= persons._id %>>
+                        <span class="text-gradient galery"><i class="fas fa-graduation-cap"></i></span>
+                    </a>
+                    <a href="add_support_approval.html" class="btn border-shadow update opt" title="sustentación">
+                        <span class="text-gradient galery"><i class="fas fa-file"></i></span>
+                    </a>
+                    <a href="add_physical_submit.html" class="btn border-shadow update opt" title="entrega física">
+                        <span class="text-gradient galery"><i class="fas fa-book"></i></span>
+                    </a>
+                    <a href="add_digital_submit.html" class="btn border-shadow update opt" title="entrega digital">
+                        <span class="text-gradient galery"><i class="fas fa-link"></i></span>
+                    </a>
+                    <a href="add_payments.html" class="btn border-shadow update opt" title="pago">
+                        <span class="text-gradient galery"><i class="fas fa-money-bill"></i></span>
+                    </a>
+                    <a href="add_debits.html" class="btn border-shadow update opt" title="adeudo">
+                        <span class="text-gradient galery"><i class="fas fa-scroll"></i></span>
+                    </a>
+                    <a href="add_language.html" class="btn border-shadow update opt" title="idioma">
+                        <span class="text-gradient galery"><i class="fas fa-globe"></i></span>
+                    </a>
+                    </div> -->
+                <!-- CINTA ORIGINAL -->
+
+
+        
+    
+    <article> 
+        <div class="container">
+            <div class="box-nav d-flex justify-between mt-1">
+                <div class="filter">
+                    <a href="/index"><i class="fas fa-angle-double-left"></i> volver</a>
+                    
+                </div>
+            </div>
+            <%- include('include/_headboard')%>
+        </div>
+        <div class="mt-10 mb-10">
+            <h1 class="text-gray-800 text-center font-bold text-6xl">SAGYT</h1>
+            <div class="md:w-4/4 mt-10">
+                <div class="max-w-4/4 mx-auto md:flex">
+                    <!-- CUADRO 1 -->
+                    <div class="px-8 mb-2 mt-auto">
+                        <div class="mx-auto bg-white pt-4 rounded-xl space-y-6 overflow-hidden transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 shadow-xl hover:shadow-2xl cursor-pointer">
+                            <div class="px-8 flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-gray-800">Egresado</h1>
+                                <!-- <a class="cursor-pointer text-blue-900 w-10 h-10" target="_blank" href="#"><i class="fas fa-eye"></i></a> -->
+                                <a href="/view-graduate?document_number=<%= persons.document_number %>" class="cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <title>Ver</title>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </a> 
+                            </div>
+                            <div class="px-20 mx-20 content-center object-cover">
+                                <svg viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M53.5066 80.1912H2.94044C1.7599 80.1912 0.776123 79.2058 0.776123 78.0233V6.8783C0.776123 5.69584 1.7599 4.71045 2.94044 4.71045H53.5066C54.6872 4.71045 55.671 5.69584 55.671 6.8783V78.0233C55.671 79.2058 54.6872 80.1912 53.5066 80.1912Z" fill="#424953"/>
+                                    <path d="M53.5066 79.4029H2.94044C1.7599 79.4029 0.776123 78.4175 0.776123 77.235V5.89289C0.776123 4.71043 1.7599 3.72504 2.94044 3.72504H53.5066C54.6872 3.72504 55.671 4.71043 55.671 5.89289V77.0379C55.671 78.4175 54.6872 79.4029 53.5066 79.4029Z" fill="#5B5F7E"/>
+                                    <path d="M49.5714 74.8702H6.87538C5.89161 74.8702 5.10458 74.0819 5.10458 72.8994V11.8053C5.10458 10.8199 5.89161 9.83453 6.87538 9.83453H49.3746C50.3584 9.83453 51.1454 10.6228 51.1454 11.8053V72.8994C51.3422 74.0819 50.5551 74.8702 49.5714 74.8702Z" fill="#CBCFD8"/>
+                                    <path d="M49.5714 74.0818H6.87538C5.89161 74.0818 5.10458 73.2935 5.10458 72.111V11.017C5.10458 10.0316 5.89161 9.0462 6.87538 9.0462H49.3746C50.3584 9.0462 51.1454 9.83451 51.1454 11.017V72.111C51.3422 73.0964 50.5551 74.0818 49.5714 74.0818Z" fill="#FDFDFD"/>
+                                    <path d="M38.7499 5.10463H37.5693C37.3726 2.54262 36.192 0.768921 34.618 0.768921H22.0256C20.6484 0.768921 19.2711 2.7397 19.0743 5.10463H17.8938C15.1392 5.10463 12.9749 7.66664 12.9749 11.017H43.6688C43.6688 7.66664 41.3077 5.10463 38.7499 5.10463ZM23.2062 2.34554H33.2407C34.4212 2.34554 35.405 3.52801 35.6018 5.10463H21.0419C21.0419 3.52801 22.0256 2.34554 23.2062 2.34554Z" fill="#EAEBF8"/>
+                                    <path d="M28.1252 2.34554H33.0441C34.2246 2.34554 35.2084 3.52801 35.4052 5.10463H28.1252V11.017H43.4722C43.4722 7.66664 41.3078 5.10463 38.5533 5.10463H37.3727C37.176 2.54262 35.9954 0.768921 34.4214 0.768921H28.1252V2.34554V2.34554Z" fill="#BDBFDF"/>
+                                    <path d="M43.472 11.017H12.7781V12.0024H43.472V11.017Z" fill="#5B5F7E"/>
+                                    <path d="M31.2733 14.7614C29.109 14.7614 26.9447 15.3526 24.9771 16.141L31.2733 29.9364H16.1231C16.1231 38.2137 22.8128 45.1114 31.2733 45.1114C39.7338 45.1114 46.4235 38.4107 46.4235 29.9364C46.4235 21.4621 39.7338 14.7614 31.2733 14.7614Z" fill="#262E7F"/>
+                                    <path d="M22.6159 14.7614C17.5003 17.1263 13.7619 22.4474 13.7619 28.5568H28.9121L22.6159 14.7614Z" fill="#262E7F"/>
+                                    <path d="M20.255 43.7318H14.5491V49.4471H20.255V43.7318Z" fill="#262E7F"/>
+                                    <path d="M33.4376 48.0676H21.2387V49.4472H33.4376V48.0676Z" fill="#8A879D"/>
+                                    <path d="M42.4885 50.8267H13.1719V52.2062H42.4885V50.8267Z" fill="#8A879D"/>
+                                    <path d="M42.4882 53.3887H21.8289V54.7682H42.4882V53.3887Z" fill="#8A879D"/>
+                                    <path d="M42.4885 55.9507H13.1719V57.1332H42.4885V55.9507Z" fill="#8A879D"/>
+                                    <path d="M27.3383 58.5126H13.1719V59.8921H27.3383V58.5126Z" fill="#8A879D"/>
+                                    <path d="M42.4884 58.5126H29.109V59.8921H42.4884V58.5126Z" fill="#8A879D"/>
+                                    <path d="M25.3707 61.0747H13.1719V62.4542H25.3707V61.0747Z" fill="#8A879D"/>
+                                    <path d="M42.4884 61.2717H26.5512V62.6513H42.4884V61.2717Z" fill="#8A879D"/>
+                                    <path d="M20.2551 63.6367H13.1719V65.0163H20.2551V63.6367Z" fill="#262E7F"/>
+                                    <path d="M20.2551 53.3887H13.1719V54.7682H20.2551V53.3887Z" fill="#262E7F"/>
+                                    <path d="M42.2915 66.1987H36.9791V67.3812H42.2915V66.1987Z" fill="#8A879D"/>
+                                    <path d="M28.9121 63.6367H21.8289V65.0163H28.9121V63.6367Z" fill="#8A879D"/>
+                                    <path d="M42.2917 63.6367H29.8961V65.0163H42.2917V63.6367Z" fill="#8A879D"/>
+                                    <path d="M35.9955 66.1987H13.1719V67.3812H35.9955V66.1987Z" fill="#8A879D"/>
+                                    <path d="M25.3707 68.7609H13.1719V70.1404H25.3707V68.7609Z" fill="#8A879D"/>
+                                    <path d="M42.2916 68.7609H26.5512V70.1404H42.2916V68.7609Z" fill="#8A879D"/>
+                                    <path d="M42.4881 48.0676H34.6179V49.4472H42.4881V48.0676Z" fill="#8A879D"/>
+                                    <path d="M13.2581 46.8595H10.5035C10.3068 46.8595 10.3068 46.6624 10.3068 46.6624V23.9985C10.3068 23.8014 10.5035 23.8014 10.5035 23.8014H13.2581C13.4549 23.8014 13.4548 23.9985 13.4548 23.9985C13.4548 24.1955 13.2581 24.1955 13.2581 24.1955H10.897V46.2682H13.2581C13.4549 46.2682 13.4548 46.4653 13.4548 46.4653C13.4548 46.6624 13.2581 46.8595 13.2581 46.8595Z" fill="#262E7F"/>
+                                </svg>
+                            </div>
+                            <!-- <h1 class="text-4xl text-center font-bold">$10.00</h1> -->
+                            <p class="px-4 text-center text-sm ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                            <ul class="text-center">
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                            </ul>
+                            <!-- <div class="text-center bg-gray-200">
+                                <button class="inline-block my-6 font-bold text-gray-800 rounded-md px-10 py-2 transition-colors w-full">Get started today</button>
+                            </div> -->
+                            <a href="/add-report?id=<%= persons._id %>" class="upgrad w-full inline-block my-6 font-bold px-10 py-4 p-2 pl-5 pr-5 text-center
+                                            transition-colors duration-700 transform bg-blue-900 hover:bg-yellow-700 text-lg
+                                            focus:border-4 border-yellow-300 text-white rounded-sm" id="newgrad"  data-id=<%=persons._id %>> <!-- block text-center w-full antes y despues de mt-4 => p-2 pl-5 pr-5 transition-colors duration-700 transform bg-indigo-500 hover:bg-blue-400 text-gray-100 text-lg rounded-lg focus:border-4 border-indigo-300 -->
+                                Crear Registro
+                            </a>
+                        </div>
+                    </div> 
+                    <!-- CUADRO 2 -->
+                    <div class="px-12 mb-2 mt-auto">
+                        <div class="mx-auto bg-white pt-4 rounded-xl space-y-6 overflow-hidden transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 shadow-xl hover:shadow-2xl">
+                            <div class="px-8 flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-gray-800">Sustentación</h1>
+                                <!-- <a class="cursor-pointer text-blue-900 w-10 h-10" target="_blank" href="#"><i class="fas fa-eye"></i></a> -->
+                                <a href="/view-approval?document_number=<%= persons.document_number %>" class="cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <title>Ver</title>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </a>                                         
+                            </div>
+                            <div class="px-20 mx-20 content-center object-cover">
+                                <svg viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M65.5671 50.4633H0.638962V80.1912H65.5671V50.4633Z" fill="#B5B9CB"/>
+                                    <path d="M65.5671 49.5759H0.638962V79.3038H65.5671V49.5759Z" fill="#F0F1F5"/>
+                                    <path d="M65.5671 48.6886H0.638962V78.4165H65.5671V48.6886Z" fill="#B5B9CB"/>
+                                    <path d="M65.5671 47.8011H0.638962V77.5291H65.5671V47.8011Z" fill="#F0F1F5"/>
+                                    <path d="M65.5671 46.47H0.638962V76.1979H65.5671V46.47Z" fill="#B5B9CB"/>
+                                    <path d="M65.5671 29.6094H0.638962V75.7543H65.5671V29.6094Z" fill="#F0F1F5"/>
+                                    <path d="M52.6704 63.7743H65.5671L49.5574 75.7542L52.6704 63.7743Z" fill="#B5B9CB"/>
+                                    <path d="M0.194336 29.6094V12.3051C0.194336 10.974 1.08377 10.0866 2.86263 10.0866H63.3437C64.6778 10.0866 66.0119 10.974 66.0119 12.3051V29.6094H0.194336Z" fill="#262E7F"/>
+                                    <path d="M65.5671 29.6094H0.638962V30.9405H65.5671V29.6094Z" fill="#B5B9CB"/>
+                                    <path d="M14.8698 12.7489C16.6486 14.5237 16.6486 16.7422 14.8698 18.517C13.0909 20.2918 10.8674 20.2918 9.08852 18.517C7.30967 16.7422 7.30967 14.5237 9.08852 12.7489C10.8674 11.4178 13.0909 11.4178 14.8698 12.7489Z" fill="#9584E9"/>
+                                    <path d="M28.6562 12.7489C30.4351 14.5237 30.4351 16.7422 28.6562 18.517C26.8774 20.2918 24.6538 20.2918 22.875 18.517C21.0961 16.7422 21.0961 14.5237 22.875 12.7489C24.6538 11.4178 27.3221 11.4178 28.6562 12.7489Z" fill="#9584E9"/>
+                                    <path d="M42.8871 12.7489C44.6659 14.5237 44.6659 16.7422 42.8871 18.517C41.1082 20.2918 38.8846 20.2918 37.1058 18.517C35.3269 16.7422 35.3269 14.5237 37.1058 12.7489C38.4399 11.4178 41.1082 11.4178 42.8871 12.7489Z" fill="#9584E9"/>
+                                    <path d="M56.6728 12.7489C58.4517 14.5237 58.4517 16.7422 56.6728 18.517C54.894 20.2918 52.6704 20.2918 50.8915 18.517C49.1127 16.7422 49.1127 14.5237 50.8915 12.7489C52.6704 11.4178 55.3387 11.4178 56.6728 12.7489Z" fill="#9584E9"/>
+                                    <path d="M21.0955 40.7019L21.985 33.6027H24.2085V43.8078H22.8744V36.7086L21.985 43.8078H20.6508L19.3167 36.7086V43.8078H17.9825V33.6027H20.2061L21.0955 40.7019Z" fill="#524C6F"/>
+                                    <path d="M30.879 43.8078H29.1002L28.6554 42.033H26.8766L26.4319 43.8078H25.0977L26.8766 33.6027H29.1002L30.879 43.8078ZM27.3213 40.2582H28.6554L27.766 35.3775L27.3213 40.2582Z" fill="#524C6F"/>
+                                    <path d="M34.8815 43.8078C34.8815 43.3641 34.8815 43.3641 34.8815 42.4767V40.7019C34.8815 39.8145 34.4368 39.3708 33.9921 39.3708H33.5474V43.3641H31.7685V33.159H33.9921C35.7709 33.159 36.2157 34.0464 36.2157 35.3775V36.2649C36.2157 37.1523 35.7709 38.0397 35.3262 38.4834C36.2156 38.9271 36.2157 39.3708 36.2157 40.7019V42.4767C36.2157 42.9204 36.2157 43.3641 36.2157 43.8078H34.8815ZM33.1027 34.9338V38.0397H33.5474C33.9921 38.0397 34.4368 37.596 34.4368 37.1523V36.2649C34.4368 35.3775 33.9921 35.3775 33.5474 35.3775H33.1027V34.9338Z" fill="#524C6F"/>
+                                    <path d="M41.9972 39.8145V41.1456C41.9972 42.9204 41.1078 43.8078 39.7736 43.8078C38.4395 43.8078 37.5501 42.9204 37.5501 41.1456V35.8212C37.5501 34.0464 38.4395 33.159 39.7736 33.159C41.1078 33.159 41.9972 34.0464 41.9972 35.8212V36.7086H40.6631V35.8212C40.6631 34.9338 40.2184 34.9338 39.7736 34.9338C39.3289 34.9338 38.8842 35.3775 38.8842 35.8212V41.1456C38.8842 42.033 39.3289 42.033 39.7736 42.033C40.2184 42.033 40.6631 41.5893 40.6631 41.1456V39.8145H41.9972Z" fill="#524C6F"/>
+                                    <path d="M44.6653 43.8078H42.8865V33.6027H44.6653V38.0397H46.4442V33.6027H48.223V43.8078H46.4442V39.3708H44.6653V43.8078Z" fill="#524C6F"/>
+                                    <path d="M25.9874 49.576C24.6533 49.576 24.2086 50.0197 24.2086 51.7945V54.4567H20.6509V52.2382C20.6509 48.2449 22.4297 46.0264 26.4321 46.0264C29.9899 46.0264 32.2134 48.2449 32.2134 52.2382C32.2134 55.3441 30.8793 58.0063 27.3216 61.9996C25.098 64.2181 24.6533 65.5492 24.6533 66.8803V67.324H31.7687V70.8736H20.6509V67.7677C20.6509 65.1055 21.5403 62.887 24.6533 60.2248C27.7663 57.1189 28.211 55.3441 28.211 52.6819C28.211 50.0197 27.3216 49.576 25.9874 49.576Z" fill="#8A879D"/>
+                                    <path d="M45.5547 46.4701V50.0197L39.7734 70.8736H35.771L41.5522 50.0197H33.9921V46.4701H45.5547Z" fill="#8A879D"/>
+                                    <path d="M14.4251 15.8547C14.4251 17.1858 13.0909 18.5169 11.7568 18.5169C10.4227 18.5169 9.0885 17.1858 9.0885 15.8547V3.43112C9.0885 2.10002 10.4227 0.768921 11.7568 0.768921C13.0909 0.768921 14.4251 2.10002 14.4251 3.43112V15.8547Z" fill="#BDBFDF"/>
+                                    <path d="M28.6559 15.8547C28.6559 17.1858 27.3218 18.5169 25.9876 18.5169C24.6535 18.5169 23.3194 17.1858 23.3194 15.8547V3.43112C23.3194 2.10002 24.6535 0.768921 25.9876 0.768921C27.3218 0.768921 28.6559 2.10002 28.6559 3.43112V15.8547Z" fill="#BDBFDF"/>
+                                    <path d="M42.4426 15.8547C42.4426 17.1858 41.1085 18.5169 39.7743 18.5169C38.4402 18.5169 37.106 17.1858 37.106 15.8547V3.43112C37.106 2.10002 38.4402 0.768921 39.7743 0.768921C41.1085 0.768921 42.4426 2.10002 42.4426 3.43112V15.8547Z" fill="#BDBFDF"/>
+                                    <path d="M56.2283 15.8547C56.2283 17.1858 54.8942 18.5169 53.56 18.5169C52.2259 18.5169 50.8918 17.1858 50.8918 15.8547V3.43112C50.8918 2.10002 52.2259 0.768921 53.56 0.768921C54.8942 0.768921 56.2283 2.10002 56.2283 3.43112V15.8547Z" fill="#BDBFDF"/>
+                                </svg>
+                            </div>
+                            <!-- <h1 class="text-4xl text-center font-bold">$10.00</h1> -->
+                            <p class="px-4 text-center text-sm">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                            <ul class="text-center">
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                            </ul>
+                            <!-- <div class="text-center bg-blue-900">
+                                <button class="inline-block my-6 font-bold text-white rounded-md px-10 py-2 transition-colors w-full">Get started today</button>
+                            </div> -->
+                            <a href="/add-approval?id=<%= persons._id %>" class="upapproval w-full inline-block my-6 font-bold px-10 py-4 p-2 pl-5 pr-5 text-center
+                                            transition-colors duration-700 transform bg-blue-900 hover:bg-yellow-700 text-lg
+                                            focus:border-4 border-yellow-300 text-white rounded-sm"
+                                            title="sustentación" id="newapp"  data-id=<%=persons._id %>> <!-- block text-center w-full antes y despues de mt-4 => p-2 pl-5 pr-5 transition-colors duration-700 transform bg-indigo-500 hover:bg-blue-400 text-gray-100 text-lg rounded-lg focus:border-4 border-indigo-300 -->
+                                Crear Registro
+                            </a>
+                        </div>
+                    </div>
+                    <!-- CUARO 3 -->
+                    <div class="px-8 mb-2 mt-auto">
+                        <div class="mx-auto bg-white pt-4 rounded-xl space-y-6 overflow-hidden transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 shadow-xl hover:shadow-2xl cursor-pointer">
+                            <div class="px-8 flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-gray-800">form-3</h1>
+                                <!-- <a class="cursor-pointer text-blue-900 w-10 h-10" target="_blank" href="#"><i class="fas fa-eye"></i></a> -->
+                                <a href="" target="_blank" class="cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <title>Ver</title>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </a> 
+                            </div>
+                            <div class="px-20 mx-20 content-center object-cover">
+                                <svg viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M80.2779 40.4801C80.2779 62.4739 62.558 80.1912 40.5609 80.1912C18.5639 80.1912 0.843994 62.4739 0.843994 40.4801C0.843994 18.4862 18.5639 0.768921 40.5609 0.768921C62.558 0.768921 80.2779 18.4862 80.2779 40.4801Z" fill="#262E7F"/>
+                                    <path d="M73.5569 40.48C73.5569 58.8082 58.8922 73.4708 40.5613 73.4708C22.2304 73.4708 7.56564 58.8082 7.56564 40.48C7.56564 22.1518 22.2304 7.4892 40.5613 7.4892C58.8922 7.4892 73.5569 22.1518 73.5569 40.48Z" fill="#EAEBF8"/>
+                                    <path d="M72.9458 41.091C72.9458 58.8083 58.8921 72.8599 41.1722 72.8599C23.4524 72.8599 9.39868 58.8083 9.39868 41.091C9.39868 23.3737 23.4524 9.32208 41.1722 9.32208C58.8921 9.32208 72.9458 23.9847 72.9458 41.091Z" fill="#FDFDFD"/>
+                                    <path d="M43.005 40.48C43.005 42.3128 41.7829 43.5347 39.9498 43.5347C38.1167 43.5347 36.8947 42.3128 36.8947 40.48C36.8947 38.6472 38.1167 37.4253 39.9498 37.4253C41.7829 37.4253 43.005 38.6472 43.005 40.48Z" fill="#524C6F"/>
+                                    <path d="M41.1721 39.8692H40.5611C39.95 39.8692 39.95 39.2582 39.95 39.2582L43.0052 31.9269H43.6162C44.2272 31.9269 44.2272 32.5379 44.2272 32.5379L41.1721 39.8692Z" fill="#524C6F"/>
+                                    <path d="M39.9502 40.4801C39.3392 39.8691 39.3392 39.8691 39.9502 39.2582C39.9502 39.2582 40.5613 39.2582 41.1723 39.2582L55.226 53.3098C55.837 53.9208 55.837 53.9208 55.226 54.5317C55.226 54.5317 54.615 54.5317 54.0039 54.5317L39.9502 40.4801Z" fill="#524C6F"/>
+                                    <path d="M38.7279 39.8691C39.3389 39.8691 39.3389 39.8691 39.3389 39.8691C39.9499 40.4801 39.3389 40.4801 38.7279 39.8691H19.1749C18.5639 39.8691 18.5639 39.8691 18.5639 39.8691H19.1749H38.7279Z" fill="#524C6F"/>
+                                    <path d="M41.172 9.32208H39.95V14.8206H41.172V9.32208Z" fill="#524C6F"/>
+                                    <path d="M71.724 39.869H66.2248V41.0909H71.724V39.869Z" fill="#524C6F"/>
+                                    <path d="M41.172 66.1396H39.95V71.6381H41.172V66.1396Z" fill="#524C6F"/>
+                                    <path d="M14.8979 39.869H9.39862V41.0909H14.8979V39.869Z" fill="#524C6F"/>
+                                    <path d="M58.892 22.7628L58.281 21.5409L61.9472 17.8752L63.1692 19.0971L58.892 22.7628Z" fill="#524C6F"/>
+                                    <path d="M58.281 59.4192L58.892 58.1973L63.1692 61.8629L61.9472 63.0848L58.281 59.4192Z" fill="#524C6F"/>
+                                    <path d="M21.745 58.354L17.8757 62.2612L18.7441 63.1209L22.6134 59.2137L21.745 58.354Z" fill="#524C6F"/>
+                                    <path d="M19.1204 18.052L18.256 18.9158L22.1435 22.8048L23.0078 21.9411L19.1204 18.052Z" fill="#524C6F"/>
+                                </svg>
+                            </div>
+                            <!-- <h1 class="text-4xl text-center font-bold">$10.00</h1> -->
+                            <p class="px-4 text-center text-sm ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                            <ul class="text-center">
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                            </ul>
+                            <!-- <div class="text-center bg-gray-200">
+                                <button class="inline-block my-6 font-bold text-gray-800 rounded-md px-10 py-2 transition-colors w-full">Get started today</button>
+                            </div> -->
+                            <a href="#" class="w-full inline-block my-6 font-bold px-10 py-4 p-2 pl-5 pr-5 text-center
+                                            transition-colors duration-700 transform bg-blue-900 hover:bg-yellow-700 text-lg
+                                            focus:border-4 border-yellow-300 text-white rounded-sm"> <!-- block text-center w-full antes y despues de mt-4 => p-2 pl-5 pr-5 transition-colors duration-700 transform bg-indigo-500 hover:bg-blue-400 text-gray-100 text-lg rounded-lg focus:border-4 border-indigo-300 -->
+                                Crear Registro
+                            </a>
+                        </div>
+                    </div>                
+                </div>
+
+                <div class="mt-24 max-w-4/4 mx-auto md:flex">
+                    <!-- CUADRO 1 -->
+                    <div class="px-8 mb-2 mt-auto">                        
+                        <div class="mx-auto bg-white pt-4 rounded-xl space-y-6 overflow-hidden transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 shadow-xl hover:shadow-2xl cursor-pointer">
+                            <div class="px-8 flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-gray-800">form-4</h1>
+                                <!-- <a class="cursor-pointer text-blue-900 w-10 h-10" target="_blank" href="#"><i class="fas fa-eye"></i></a> -->
+                                <a href="https://www.unab.edu.pe/web/" target="_blank" class="cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <title>Ver</title>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </a> 
+                            </div>
+                            <div class="px-20 mx-20 items-center flex object-cover">
+                                <svg viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M53.5066 80.1912H2.94044C1.7599 80.1912 0.776123 79.2058 0.776123 78.0233V6.8783C0.776123 5.69584 1.7599 4.71045 2.94044 4.71045H53.5066C54.6872 4.71045 55.671 5.69584 55.671 6.8783V78.0233C55.671 79.2058 54.6872 80.1912 53.5066 80.1912Z" fill="#424953"/>
+                                    <path d="M53.5066 79.4029H2.94044C1.7599 79.4029 0.776123 78.4175 0.776123 77.235V5.89289C0.776123 4.71043 1.7599 3.72504 2.94044 3.72504H53.5066C54.6872 3.72504 55.671 4.71043 55.671 5.89289V77.0379C55.671 78.4175 54.6872 79.4029 53.5066 79.4029Z" fill="#5B5F7E"/>
+                                    <path d="M49.5714 74.8702H6.87538C5.89161 74.8702 5.10458 74.0819 5.10458 72.8994V11.8053C5.10458 10.8199 5.89161 9.83453 6.87538 9.83453H49.3746C50.3584 9.83453 51.1454 10.6228 51.1454 11.8053V72.8994C51.3422 74.0819 50.5551 74.8702 49.5714 74.8702Z" fill="#CBCFD8"/>
+                                    <path d="M49.5714 74.0818H6.87538C5.89161 74.0818 5.10458 73.2935 5.10458 72.111V11.017C5.10458 10.0316 5.89161 9.0462 6.87538 9.0462H49.3746C50.3584 9.0462 51.1454 9.83451 51.1454 11.017V72.111C51.3422 73.0964 50.5551 74.0818 49.5714 74.0818Z" fill="#FDFDFD"/>
+                                    <path d="M38.7499 5.10463H37.5693C37.3726 2.54262 36.192 0.768921 34.618 0.768921H22.0256C20.6484 0.768921 19.2711 2.7397 19.0743 5.10463H17.8938C15.1392 5.10463 12.9749 7.66664 12.9749 11.017H43.6688C43.6688 7.66664 41.3077 5.10463 38.7499 5.10463ZM23.2062 2.34554H33.2407C34.4212 2.34554 35.405 3.52801 35.6018 5.10463H21.0419C21.0419 3.52801 22.0256 2.34554 23.2062 2.34554Z" fill="#EAEBF8"/>
+                                    <path d="M28.1252 2.34554H33.0441C34.2246 2.34554 35.2084 3.52801 35.4052 5.10463H28.1252V11.017H43.4722C43.4722 7.66664 41.3078 5.10463 38.5533 5.10463H37.3727C37.176 2.54262 35.9954 0.768921 34.4214 0.768921H28.1252V2.34554V2.34554Z" fill="#BDBFDF"/>
+                                    <path d="M43.472 11.017H12.7781V12.0024H43.472V11.017Z" fill="#5B5F7E"/>
+                                    <path d="M31.2733 14.7614C29.109 14.7614 26.9447 15.3526 24.9771 16.141L31.2733 29.9364H16.1231C16.1231 38.2137 22.8128 45.1114 31.2733 45.1114C39.7338 45.1114 46.4235 38.4107 46.4235 29.9364C46.4235 21.4621 39.7338 14.7614 31.2733 14.7614Z" fill="#262E7F"/>
+                                    <path d="M22.6159 14.7614C17.5003 17.1263 13.7619 22.4474 13.7619 28.5568H28.9121L22.6159 14.7614Z" fill="#262E7F"/>
+                                    <path d="M20.255 43.7318H14.5491V49.4471H20.255V43.7318Z" fill="#262E7F"/>
+                                    <path d="M33.4376 48.0676H21.2387V49.4472H33.4376V48.0676Z" fill="#8A879D"/>
+                                    <path d="M42.4885 50.8267H13.1719V52.2062H42.4885V50.8267Z" fill="#8A879D"/>
+                                    <path d="M42.4882 53.3887H21.8289V54.7682H42.4882V53.3887Z" fill="#8A879D"/>
+                                    <path d="M42.4885 55.9507H13.1719V57.1332H42.4885V55.9507Z" fill="#8A879D"/>
+                                    <path d="M27.3383 58.5126H13.1719V59.8921H27.3383V58.5126Z" fill="#8A879D"/>
+                                    <path d="M42.4884 58.5126H29.109V59.8921H42.4884V58.5126Z" fill="#8A879D"/>
+                                    <path d="M25.3707 61.0747H13.1719V62.4542H25.3707V61.0747Z" fill="#8A879D"/>
+                                    <path d="M42.4884 61.2717H26.5512V62.6513H42.4884V61.2717Z" fill="#8A879D"/>
+                                    <path d="M20.2551 63.6367H13.1719V65.0163H20.2551V63.6367Z" fill="#262E7F"/>
+                                    <path d="M20.2551 53.3887H13.1719V54.7682H20.2551V53.3887Z" fill="#262E7F"/>
+                                    <path d="M42.2915 66.1987H36.9791V67.3812H42.2915V66.1987Z" fill="#8A879D"/>
+                                    <path d="M28.9121 63.6367H21.8289V65.0163H28.9121V63.6367Z" fill="#8A879D"/>
+                                    <path d="M42.2917 63.6367H29.8961V65.0163H42.2917V63.6367Z" fill="#8A879D"/>
+                                    <path d="M35.9955 66.1987H13.1719V67.3812H35.9955V66.1987Z" fill="#8A879D"/>
+                                    <path d="M25.3707 68.7609H13.1719V70.1404H25.3707V68.7609Z" fill="#8A879D"/>
+                                    <path d="M42.2916 68.7609H26.5512V70.1404H42.2916V68.7609Z" fill="#8A879D"/>
+                                    <path d="M42.4881 48.0676H34.6179V49.4472H42.4881V48.0676Z" fill="#8A879D"/>
+                                    <path d="M13.2581 46.8595H10.5035C10.3068 46.8595 10.3068 46.6624 10.3068 46.6624V23.9985C10.3068 23.8014 10.5035 23.8014 10.5035 23.8014H13.2581C13.4549 23.8014 13.4548 23.9985 13.4548 23.9985C13.4548 24.1955 13.2581 24.1955 13.2581 24.1955H10.897V46.2682H13.2581C13.4549 46.2682 13.4548 46.4653 13.4548 46.4653C13.4548 46.6624 13.2581 46.8595 13.2581 46.8595Z" fill="#262E7F"/>
+                                </svg>
+                            </div>                           
+                            <!-- <h1 class="text-4xl text-center font-bold">$10.00</h1>                             -->
+                            <p class="px-4 text-center text-sm ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                            <ul class="text-center">
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                            </ul>
+                            <!-- <div class="text-center bg-gray-200">
+                                <button class="w-full inline-block my-6 font-bold text-gray-800 rounded-md px-10 py-2 transition-colors">Get started today</button>
+                            </div> -->
+                            <a href="#" class="w-full inline-block my-6 font-bold px-10 py-4 p-2 pl-5 pr-5 text-center
+                                            transition-colors duration-700 transform bg-blue-900 hover:bg-yellow-700 text-lg
+                                            focus:border-4 border-yellow-300 text-white rounded-sm"> <!-- block text-center w-full antes y despues de mt-4 => p-2 pl-5 pr-5 transition-colors duration-700 transform bg-indigo-500 hover:bg-blue-400 text-gray-100 text-lg rounded-lg focus:border-4 border-indigo-300 -->
+                                Crear Registro
+                            </a>
+                        </div>                        
+                    </div>
+                    <!-- CUADRO 2 -->
+                    <div class="px-12 mb-2 mt-auto">
+                        <div class="mx-auto bg-white pt-4 rounded-xl space-y-6 overflow-hidden transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 shadow-xl hover:shadow-2xl">
+                            <div class="px-8 flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-gray-800">form-5</h1>
+                                <!-- <a class="cursor-pointer text-blue-900 w-10 h-10" target="_blank" href="#"><i class="fas fa-eye"></i></a> -->
+                                <a href="https://www.unab.edu.pe/web/" target="_blank" class="cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <title>Ver</title>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </a>                                        
+                            </div>
+                            <div class="px-20 mx-20 content-center object-cover">
+                                <svg viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M65.5671 50.4633H0.638962V80.1912H65.5671V50.4633Z" fill="#B5B9CB"/>
+                                    <path d="M65.5671 49.5759H0.638962V79.3038H65.5671V49.5759Z" fill="#F0F1F5"/>
+                                    <path d="M65.5671 48.6886H0.638962V78.4165H65.5671V48.6886Z" fill="#B5B9CB"/>
+                                    <path d="M65.5671 47.8011H0.638962V77.5291H65.5671V47.8011Z" fill="#F0F1F5"/>
+                                    <path d="M65.5671 46.47H0.638962V76.1979H65.5671V46.47Z" fill="#B5B9CB"/>
+                                    <path d="M65.5671 29.6094H0.638962V75.7543H65.5671V29.6094Z" fill="#F0F1F5"/>
+                                    <path d="M52.6704 63.7743H65.5671L49.5574 75.7542L52.6704 63.7743Z" fill="#B5B9CB"/>
+                                    <path d="M0.194336 29.6094V12.3051C0.194336 10.974 1.08377 10.0866 2.86263 10.0866H63.3437C64.6778 10.0866 66.0119 10.974 66.0119 12.3051V29.6094H0.194336Z" fill="#262E7F"/>
+                                    <path d="M65.5671 29.6094H0.638962V30.9405H65.5671V29.6094Z" fill="#B5B9CB"/>
+                                    <path d="M14.8698 12.7489C16.6486 14.5237 16.6486 16.7422 14.8698 18.517C13.0909 20.2918 10.8674 20.2918 9.08852 18.517C7.30967 16.7422 7.30967 14.5237 9.08852 12.7489C10.8674 11.4178 13.0909 11.4178 14.8698 12.7489Z" fill="#9584E9"/>
+                                    <path d="M28.6562 12.7489C30.4351 14.5237 30.4351 16.7422 28.6562 18.517C26.8774 20.2918 24.6538 20.2918 22.875 18.517C21.0961 16.7422 21.0961 14.5237 22.875 12.7489C24.6538 11.4178 27.3221 11.4178 28.6562 12.7489Z" fill="#9584E9"/>
+                                    <path d="M42.8871 12.7489C44.6659 14.5237 44.6659 16.7422 42.8871 18.517C41.1082 20.2918 38.8846 20.2918 37.1058 18.517C35.3269 16.7422 35.3269 14.5237 37.1058 12.7489C38.4399 11.4178 41.1082 11.4178 42.8871 12.7489Z" fill="#9584E9"/>
+                                    <path d="M56.6728 12.7489C58.4517 14.5237 58.4517 16.7422 56.6728 18.517C54.894 20.2918 52.6704 20.2918 50.8915 18.517C49.1127 16.7422 49.1127 14.5237 50.8915 12.7489C52.6704 11.4178 55.3387 11.4178 56.6728 12.7489Z" fill="#9584E9"/>
+                                    <path d="M21.0955 40.7019L21.985 33.6027H24.2085V43.8078H22.8744V36.7086L21.985 43.8078H20.6508L19.3167 36.7086V43.8078H17.9825V33.6027H20.2061L21.0955 40.7019Z" fill="#524C6F"/>
+                                    <path d="M30.879 43.8078H29.1002L28.6554 42.033H26.8766L26.4319 43.8078H25.0977L26.8766 33.6027H29.1002L30.879 43.8078ZM27.3213 40.2582H28.6554L27.766 35.3775L27.3213 40.2582Z" fill="#524C6F"/>
+                                    <path d="M34.8815 43.8078C34.8815 43.3641 34.8815 43.3641 34.8815 42.4767V40.7019C34.8815 39.8145 34.4368 39.3708 33.9921 39.3708H33.5474V43.3641H31.7685V33.159H33.9921C35.7709 33.159 36.2157 34.0464 36.2157 35.3775V36.2649C36.2157 37.1523 35.7709 38.0397 35.3262 38.4834C36.2156 38.9271 36.2157 39.3708 36.2157 40.7019V42.4767C36.2157 42.9204 36.2157 43.3641 36.2157 43.8078H34.8815ZM33.1027 34.9338V38.0397H33.5474C33.9921 38.0397 34.4368 37.596 34.4368 37.1523V36.2649C34.4368 35.3775 33.9921 35.3775 33.5474 35.3775H33.1027V34.9338Z" fill="#524C6F"/>
+                                    <path d="M41.9972 39.8145V41.1456C41.9972 42.9204 41.1078 43.8078 39.7736 43.8078C38.4395 43.8078 37.5501 42.9204 37.5501 41.1456V35.8212C37.5501 34.0464 38.4395 33.159 39.7736 33.159C41.1078 33.159 41.9972 34.0464 41.9972 35.8212V36.7086H40.6631V35.8212C40.6631 34.9338 40.2184 34.9338 39.7736 34.9338C39.3289 34.9338 38.8842 35.3775 38.8842 35.8212V41.1456C38.8842 42.033 39.3289 42.033 39.7736 42.033C40.2184 42.033 40.6631 41.5893 40.6631 41.1456V39.8145H41.9972Z" fill="#524C6F"/>
+                                    <path d="M44.6653 43.8078H42.8865V33.6027H44.6653V38.0397H46.4442V33.6027H48.223V43.8078H46.4442V39.3708H44.6653V43.8078Z" fill="#524C6F"/>
+                                    <path d="M25.9874 49.576C24.6533 49.576 24.2086 50.0197 24.2086 51.7945V54.4567H20.6509V52.2382C20.6509 48.2449 22.4297 46.0264 26.4321 46.0264C29.9899 46.0264 32.2134 48.2449 32.2134 52.2382C32.2134 55.3441 30.8793 58.0063 27.3216 61.9996C25.098 64.2181 24.6533 65.5492 24.6533 66.8803V67.324H31.7687V70.8736H20.6509V67.7677C20.6509 65.1055 21.5403 62.887 24.6533 60.2248C27.7663 57.1189 28.211 55.3441 28.211 52.6819C28.211 50.0197 27.3216 49.576 25.9874 49.576Z" fill="#8A879D"/>
+                                    <path d="M45.5547 46.4701V50.0197L39.7734 70.8736H35.771L41.5522 50.0197H33.9921V46.4701H45.5547Z" fill="#8A879D"/>
+                                    <path d="M14.4251 15.8547C14.4251 17.1858 13.0909 18.5169 11.7568 18.5169C10.4227 18.5169 9.0885 17.1858 9.0885 15.8547V3.43112C9.0885 2.10002 10.4227 0.768921 11.7568 0.768921C13.0909 0.768921 14.4251 2.10002 14.4251 3.43112V15.8547Z" fill="#BDBFDF"/>
+                                    <path d="M28.6559 15.8547C28.6559 17.1858 27.3218 18.5169 25.9876 18.5169C24.6535 18.5169 23.3194 17.1858 23.3194 15.8547V3.43112C23.3194 2.10002 24.6535 0.768921 25.9876 0.768921C27.3218 0.768921 28.6559 2.10002 28.6559 3.43112V15.8547Z" fill="#BDBFDF"/>
+                                    <path d="M42.4426 15.8547C42.4426 17.1858 41.1085 18.5169 39.7743 18.5169C38.4402 18.5169 37.106 17.1858 37.106 15.8547V3.43112C37.106 2.10002 38.4402 0.768921 39.7743 0.768921C41.1085 0.768921 42.4426 2.10002 42.4426 3.43112V15.8547Z" fill="#BDBFDF"/>
+                                    <path d="M56.2283 15.8547C56.2283 17.1858 54.8942 18.5169 53.56 18.5169C52.2259 18.5169 50.8918 17.1858 50.8918 15.8547V3.43112C50.8918 2.10002 52.2259 0.768921 53.56 0.768921C54.8942 0.768921 56.2283 2.10002 56.2283 3.43112V15.8547Z" fill="#BDBFDF"/>
+                                </svg>
+                            </div>
+                            <!-- <h1 class="text-4xl text-center font-bold">$10.00</h1> -->
+                            <p class="px-4 text-center text-sm">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                            <ul class="text-center">
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                            </ul>
+                            <!-- <div class="text-center bg-blue-900">
+                                <button class="inline-block my-6 font-bold text-white rounded-md px-10 py-2 transition-colors w-full">Get started today</button>
+                            </div> -->
+                            <a href="#" class="w-full inline-block my-6 font-bold px-10 py-4 p-2 pl-5 pr-5 text-center
+                                            transition-colors duration-700 transform bg-blue-900 hover:bg-yellow-700 text-lg
+                                            focus:border-4 border-yellow-300 text-white rounded-sm"> <!-- block text-center w-full antes y despues de mt-4 => p-2 pl-5 pr-5 transition-colors duration-700 transform bg-indigo-500 hover:bg-blue-400 text-gray-100 text-lg rounded-lg focus:border-4 border-indigo-300 -->
+                                Crear Registro
+                            </a>
+                        </div>
+                    </div>
+                    <!-- CUARO 3 -->
+                    <div class="px-8 mb-2 mt-auto">
+                        <div class="mx-auto bg-white pt-4 rounded-xl space-y-6 overflow-hidden transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 shadow-xl hover:shadow-2xl cursor-pointer">
+                            <div class="px-8 flex justify-between items-center">
+                                <h4 class="text-xl font-bold text-gray-800">form-6</h1>
+                                <!-- <a class="cursor-pointer text-blue-900 w-10 h-10" target="_blank" href="#"><i class="fas fa-eye"></i></a> -->
+                                <a href="https://www.unab.edu.pe/web/" target="_blank" class="cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <title>Ver</title>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="px-20 mx-20 content-center object-cover">
+                                <svg viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M80.2779 40.4801C80.2779 62.4739 62.558 80.1912 40.5609 80.1912C18.5639 80.1912 0.843994 62.4739 0.843994 40.4801C0.843994 18.4862 18.5639 0.768921 40.5609 0.768921C62.558 0.768921 80.2779 18.4862 80.2779 40.4801Z" fill="#262E7F"/>
+                                    <path d="M73.5569 40.48C73.5569 58.8082 58.8922 73.4708 40.5613 73.4708C22.2304 73.4708 7.56564 58.8082 7.56564 40.48C7.56564 22.1518 22.2304 7.4892 40.5613 7.4892C58.8922 7.4892 73.5569 22.1518 73.5569 40.48Z" fill="#EAEBF8"/>
+                                    <path d="M72.9458 41.091C72.9458 58.8083 58.8921 72.8599 41.1722 72.8599C23.4524 72.8599 9.39868 58.8083 9.39868 41.091C9.39868 23.3737 23.4524 9.32208 41.1722 9.32208C58.8921 9.32208 72.9458 23.9847 72.9458 41.091Z" fill="#FDFDFD"/>
+                                    <path d="M43.005 40.48C43.005 42.3128 41.7829 43.5347 39.9498 43.5347C38.1167 43.5347 36.8947 42.3128 36.8947 40.48C36.8947 38.6472 38.1167 37.4253 39.9498 37.4253C41.7829 37.4253 43.005 38.6472 43.005 40.48Z" fill="#524C6F"/>
+                                    <path d="M41.1721 39.8692H40.5611C39.95 39.8692 39.95 39.2582 39.95 39.2582L43.0052 31.9269H43.6162C44.2272 31.9269 44.2272 32.5379 44.2272 32.5379L41.1721 39.8692Z" fill="#524C6F"/>
+                                    <path d="M39.9502 40.4801C39.3392 39.8691 39.3392 39.8691 39.9502 39.2582C39.9502 39.2582 40.5613 39.2582 41.1723 39.2582L55.226 53.3098C55.837 53.9208 55.837 53.9208 55.226 54.5317C55.226 54.5317 54.615 54.5317 54.0039 54.5317L39.9502 40.4801Z" fill="#524C6F"/>
+                                    <path d="M38.7279 39.8691C39.3389 39.8691 39.3389 39.8691 39.3389 39.8691C39.9499 40.4801 39.3389 40.4801 38.7279 39.8691H19.1749C18.5639 39.8691 18.5639 39.8691 18.5639 39.8691H19.1749H38.7279Z" fill="#524C6F"/>
+                                    <path d="M41.172 9.32208H39.95V14.8206H41.172V9.32208Z" fill="#524C6F"/>
+                                    <path d="M71.724 39.869H66.2248V41.0909H71.724V39.869Z" fill="#524C6F"/>
+                                    <path d="M41.172 66.1396H39.95V71.6381H41.172V66.1396Z" fill="#524C6F"/>
+                                    <path d="M14.8979 39.869H9.39862V41.0909H14.8979V39.869Z" fill="#524C6F"/>
+                                    <path d="M58.892 22.7628L58.281 21.5409L61.9472 17.8752L63.1692 19.0971L58.892 22.7628Z" fill="#524C6F"/>
+                                    <path d="M58.281 59.4192L58.892 58.1973L63.1692 61.8629L61.9472 63.0848L58.281 59.4192Z" fill="#524C6F"/>
+                                    <path d="M21.745 58.354L17.8757 62.2612L18.7441 63.1209L22.6134 59.2137L21.745 58.354Z" fill="#524C6F"/>
+                                    <path d="M19.1204 18.052L18.256 18.9158L22.1435 22.8048L23.0078 21.9411L19.1204 18.052Z" fill="#524C6F"/>
+                                </svg>
+                            </div>
+                            <!-- <h1 class="text-4xl text-center font-bold">$10.00</h1> -->
+                            <p class="px-4 text-center text-sm ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
+                            <ul class="text-center">
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                                <li><a href="#" class="font-semibold">It is a long established</a></li>
+                            </ul>
+                            <!-- <div class="text-center bg-gray-200">
+                                <button class="inline-block my-6 font-bold text-gray-800 rounded-md px-10 py-2 transition-colors w-full">Get started today</button>
+                            </div> -->
+                            <a href="#" class="w-full inline-block my-6 font-bold px-10 py-4 p-2 pl-5 pr-5 text-center
+                                            transition-colors duration-700 transform bg-blue-900 hover:bg-yellow-700 text-lg
+                                            focus:border-4 border-yellow-300 text-white rounded-sm"> <!-- block text-center w-full antes y despues de mt-4 => p-2 pl-5 pr-5 transition-colors duration-700 transform bg-indigo-500 hover:bg-blue-400 text-gray-100 text-lg rounded-lg focus:border-4 border-indigo-300 -->
+                                Crear Registro
+                            </a>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </article> 
+
+    
+    <!-- /Main Site -->
+
+    <!-- footer -->
+    <%- include('include/_footer')%>
+        <!-- footer -->

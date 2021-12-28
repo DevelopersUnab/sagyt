@@ -1,0 +1,17 @@
+<%for(var i=0; i<graduates.length; i++){%>
+<tr>
+    <td><%= graduates[i].code_graduate%></td>
+    <td><%= graduates[i].surname_pat+" "+graduates[i].surname_mat+", "+graduates[i].first_names%></td>
+    <td><%= graduates[i].program_academic%></td>
+    <td><%= graduates[i].study_plan%></td>
+    <td><%= graduates[i].condition%></td>
+    <td>
+        <a href="/update-report?id=<%= graduates[i]._id %>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%= graduates[i]._id %>>
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<%}%>

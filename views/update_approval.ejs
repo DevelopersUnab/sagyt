@@ -1,0 +1,210 @@
+<!-- header -->
+<%- include('include/_header')%>
+<!-- header -->
+
+<!-- /Main site se quito el site-main-->
+<main id="">
+    <% approval.forEach(function(approval) { %>
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/view-approval?document_number=<%= approval.person.document_number %>"><i class="fas fa-angle-double-left"></i>Volver</a>
+            </div>
+        </div>
+        <!-- <div class="form-title text-center">
+            <h2 class="text-dark">Actualizar registro de sustentación</h2>
+            <span class="text-light">Utiliza el siguiente formulario para actualizar datos sobre sustentación</span>
+        </div>              -->
+        
+        <!-- update approval form -->
+        <!-- <form action="" method="POST" id="update_approval">
+            <div class="new_report">
+                <div class="form-group">
+                    <label for="date_support" class="text-light">Fecha de Sustentación</label>
+                    <input type="hidden" name="id" value="<%= approval._id %>">
+                    <input type="date" id="start" name="date_support" value="<%= approval.date_support.substring(0,10) %>">
+                </div>
+                <div class="form-group">
+                    <label for="type_support" class="text-light">Tipo de Sustentación</label>
+                    <select name="type_support">
+                        <option value="investigacion"<%= approval.type_support=='investigacion'?'selected':'' %>>Trabajo de investigación</option>
+                        <option value="tesis"<%= approval.type_support=='tesis'?'selected':'' %>>Tesis</option>
+                        <option value="suficiencia"<%= approval.type_support=='suficiencia'?'selected':'' %>>Trabajo de suficiencia profesional</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="title_support" class="text-light">Título del trabajo de investigación, tesis o trabajo de suficiencia profesional</label>
+                    <input type="text" name="title_support" value="<%= approval.title_support %>" placeholder="Ingrese el título">
+                </div>
+                <div class="form-group">
+                    <label for="modality_support" class="text-light">Modalidad de sustentación</label>
+                    <select name="modality_support">
+                        <option value="presencial"<%= approval.modality_support=='presencial'?'selected':'' %>>Presencial</option>
+                        <option value="virtual"<%= approval.modality_support=='virtual'?'selected':'' %>>Virtual</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="originality_proyect" class="text-light">Originalidad del Trabajo</label>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-4" name="originality_proyect" value="Si"<%= approval.originality_proyect=='Si'?'checked':'' %>>
+                        <label for="radio-4" class="radio-label">Si</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-5" name="originality_proyect" value="No"<%= approval.originality_proyect=='No'?'checked':'' %>>
+                        <label for="radio-5" class="radio-label">No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="approval_support" class="text-light">Aprobación de sustentación</label>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-6" name="approval_support" value="Si"<%= approval.approval_support=='Si'?'checked':'' %>>
+                        <label for="radio-6" class="radio-label">Si</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-7" name="approval_support" value="No"<%= approval.approval_support=='No'?'checked':'' %>>
+                        <label for="radio-7" class="radio-label">No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="state" value="completo">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Guardar</button>
+                </div>
+            </div>
+        </form> -->
+
+        <!-- CREANDO NUEVO FORM -->
+        <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md mt-10 my-6">
+            <h1 class="text-xl font-bold text-blue-900 capitalize dark:text-blue-900 text-center">ACTUALIZAR DATOS DE SUSTENTACIÓN Y APROBACIÓN</h1>
+            <form action="" method="POST" id="update_approval">
+                <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="date_support">Fecha de Sustentación</label>
+                        <input type="hidden" name="id" value="<%= approval._id %>">
+                        <input value="<%= approval.date_support.substring(0,10) %>" id="start" name="date_support" type="date" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="type_support">Tipo de Sustentación</label>
+                        <select name="type_support" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                            <option value="investigacion"<%= approval.type_support=='investigacion'?'selected':'' %>>Trabajo de investigación</option>
+                            <option value="tesis"<%= approval.type_support=='tesis'?'selected':'' %>>Tesis</option>
+                            <option value="suficiencia"<%= approval.type_support=='suficiencia'?'selected':'' %>>Trabajo de suficiencia profesional</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="title_support">Título del trabajo de investigación, tesis o trabajo de suficiencia profesional</label>
+                        <input value="<%= approval.title_support %>" placeholder="Ingrese el título" id="title_support" name="title_support" type="text" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Ingrese título">
+                    </div>
+                    
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="modality_support">Modalidad de sustentación</label>
+                        <label class="text-blue-800 dark:text-blue-900" for="modality_support"></label>
+                        <select name="modality_support" class="block w-full px-4 py-2 mt-4 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                            <option value="presencial"<%= approval.modality_support=='presencial'?'selected':'' %>>Presencial</option>
+                            <option value="virtual"<%= approval.modality_support=='virtual'?'selected':'' %>>Virtual</option>
+                        </select>
+                    </div>
+
+                    <div class="flex items-center mb-4">
+                        <label class="text-blue-800 dark:text-blue-900" for="originality_proyect">Originalidad del Trabajo</label>
+                        <label class="text-blue-800 dark:text-blue-900 px-4"></label>
+                        <input id="radio-4" type="radio" name="originality_proyect" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="originality_proyect" aria-describedby="originality_proyect" value="Si"<%= approval.originality_proyect=='Si'?'checked':'' %>>
+                        <label for="radio-4" class="text-sm font-medium text-gray-900 ml-2 block">Sí</label>
+                        <label class="text-blue-800 dark:text-blue-900 px-4"></label>
+                        <input id="radio-5" type="radio" name="originality_proyect" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="originality_proyect" aria-describedby="originality_proyect" value="No"<%= approval.originality_proyect=='No'?'checked':'' %>>
+                        <label for="radio-5" class="text-sm font-medium text-gray-900 ml-2 block">No</label>              
+                    </div>
+
+                    <div class="flex items-center mb-4">
+                        <label class="text-blue-800 dark:text-blue-900" for="approval_support">Aprobación de sustentación</label>
+                        <label class="text-blue-800 dark:text-blue-900 px-4"></label>
+                        <input id="radio-6" type="radio" name="approval_support" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="approval_support" aria-describedby="approval_support" value="Si"<%= approval.approval_support=='Si'?'checked':'' %>>
+                        <label for="radio-6" class="text-sm font-medium text-gray-900 ml-2 block">Sí</label>
+                        <label class="text-blue-800 dark:text-blue-900 px-4"></label>
+                        <input id="radio-7" type="radio" name="approval_support" class="h-4 w-4 border-gray-300 focus:ring-2 focus:ring-blue-300" aria-labelledby="approval_support" aria-describedby="approval_support" value="No"<%= approval.approval_support=='No'?'checked':'' %>>
+                        <label for="radio-7" class="text-sm font-medium text-gray-900 ml-2 block">No</label>              
+                    </div>
+
+                    <input type="hidden" name="state" value="completo">
+                    
+                    <!-- <div> 
+                        <label class="text-blue-800 dark:text-blue-900" for="emailAddress">Email Address</label>
+                        <input id="emailAddress" type="email" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="password">Password</label>
+                        <input id="password" type="password" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="passwordConfirmation">Password Confirmation</label>
+                        <input id="passwordConfirmation" type="password" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="passwordConfirmation">Color</label>
+                        <input id="color" type="color" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="passwordConfirmation">Select</label>
+                        <select class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                            <option>Surabaya</option>
+                            <option>Jakarta</option>
+                            <option>Tangerang</option>
+                            <option>Bandung</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="passwordConfirmation">Range</label>
+                        <input id="range" type="range" class="block w-full py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="passwordConfirmation">Date</label>
+                        <input id="date" type="date" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    </div>
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="passwordConfirmation">Text Area</label>
+                        <textarea id="textarea" type="textarea" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-blue-800">
+                        Image
+                    </label>
+                    <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                        <div class="space-y-1 text-center">
+                        <svg class="mx-auto h-12 w-12 text-blue-800" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                            <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div class="flex text-sm text-gray-600">
+                            <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                            <span class="">Upload a file</span>
+                            <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                            </label>
+                            <p class="pl-1 text-blue-800">or drag and drop</p>
+                        </div>
+                        <p class="text-xs text-blue-800">
+                            PNG, JPG, GIF up to 10MB
+                        </p>
+                        </div>
+                    </div>
+                    </div> -->
+                </div>
+                <div class="flex justify-center mt-4">
+                    <button type="submit" class="update px-32 py-3 font-bold leading-5 text-gray-200 transition-colors duration-200 transform bg-yellow-600 rounded-md hover:bg-blue-900 focus:outline-none focus:bg-gray-600">ACTUALIZAR</button>
+                </div>
+            </form>
+        </section>
+        
+      
+    
+    </div>
+    <% }); %>
+</main>
+<!-- /Main site -->
+
+<!-- footer -->
+    <%- include('include/_footer')%>
+<!-- footer -->

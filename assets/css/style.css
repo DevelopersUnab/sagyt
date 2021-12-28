@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito&display=swap');
+
+:root{
+    --dark: #2b2d42;
+    --light: #adb5bd;
+    --border: #dee2e6;
+    --border-btn: #edf2f4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+img{
+    width: 220px;
+    height: 220px;
+    border-radius: 150px;
+    display: block;
+    margin: auto;
+    
+}
+
+.container{
+    max-width: 1024px;
+    margin: auto;
+}
+
+.nav-brand{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.border-shadow{
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #e9ecef;
+}
+
+.text-dark{
+    color: var(--dark);
+}
+
+.inline{
+    display: inline-block;
+}
+
+.text-light{
+    color: var(--light);
+}
+
+.text-gradient{
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .text-gradient:hover{
+    background: #F4D03F;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.gridopt{
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    /* position: relative; */
+    grid-template-columns: 50% 50%;
+}
+
+/* TERCERA VERSION CINTA */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-7{
+    width: 14.2%;
+}
+
+.grid-21{
+    width: 4.5%;
+}
+
+.btntxt{
+    font-size: 20px;
+    padding-bottom: 45px;
+}
+
+
+
+/* FIN TERCERA VERSION */
+
+.grid div{
+    /* background: #ecf0f1; */
+    padding: 1em;
+}
+
+.gridopt div{
+    padding: 1em;
+}
+
+.d-gridmain:hover{
+    background: #2b2d42;
+    border-radius: 10px;
+    /* margin: 0 auto; */
+    /* position: absolute; */
+}
+
+.d-grid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.d-gridopt{
+    display: grid;
+    width: 12%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.d-gridoptsub:hover{
+    background: #2b2d42;
+    border-radius: 10px;
+}
+.d-gridcolumn{
+    font-size: 0.875rem;
+    padding-right: 2rem;
+    font-weight: 300;
+    
+}
+.htext{
+    border-bottom: 1px solid var(--dark);
+}
+
+.hname{
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0;
+    display: block;
+}
+
+.hdname{
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0;
+    display: block;
+}
+
+.dtext{
+    line-height: 1.8;
+    margin-bottom: 0;
+    display: block;
+}
+
+.state{
+    font-size: 3.5em;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0;
+    display: block;
+}
+
+.galery{
+    font-size: 550%;
+}
+
+.galerytext{
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+.galerymain{
+    font-size: 320%;
+}
+
+.galerysub{
+    font-size: 100%;
+}
+
+.opt span:hover{
+    background: #F4D03F;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* display: block;
+    margin:auto; */
+} 
+
+/* #header nav{
+    background-color: #F4D03F;
+    padding: 1em 0;
+    width: 100%;
+} */
+
+#site-main{
+    margin-top: 6em;
+    font-family: 'Nunito', sans-serif;
+}
+
+#site-main .container .box-nav a{
+    font-size: 1em;
+    padding: .5em 1em;
+    border-radius: 20px;
+}
+
+#site-main .container .box-nav{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#site-main .container form{
+    margin: 2em 0;
+}
+
+table{
+    border-spacing: 0px;
+    width: 100%;
+}
+
+table td, .table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.table td > a.btn{
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+
+.table tr:hover{
+    background-color: #e4b80b;
+}
+
+.table tr:hover td > a{
+    box-shadow: none;
+}
+
+.table .thead-dark th{
+    color: #fff;
+    background-color: var(--dark);
+    border-color: #32383e;
+}
+
+/* Responsive Design */
+@media only screen and (max-width:1024px){
+    table, thead, tbody, th, td, tr{
+        display: block;
+    }
+
+    thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr{border:1px solid var(--border)}
+
+    td{
+        border: none;
+        border-bottom: 1px solid var(--border);
+        position: relative;
+    }
+}
+
+/* add user and update user template */
+.form-title{
+    margin-top: 2em;
+}
+
+.form-title>h2{
+    padding: .5em 0;
+}
+
+.new_report{
+    max-width: 786px;
+    margin: auto;
+}
+
+#update_report .form-group, #add_report .form-group,
+#update_person .form-group, #add_person .form-group{
+    margin: .4em 0;
+}
+
+#update_report .form-group input[type="text"],
+#add_report .form-group input[type="text"],
+#update_person .form-group input[type="text"],
+#add_person .form-group input[type="text"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;   
+    border: 1px solid var(--border);
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+#update_report .form-group input[type="date"],
+#add_report .form-group input[type="date"],
+#update_person .form-group input[type="date"],
+#add_person .form-group input[type="date"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;   
+    border: 1px solid var(--border);
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+#update_report .form-group input[type="number"],
+#add_report .form-group input[type="number"],
+#update_person .form-group input[type="number"],
+#add_person .form-group input[type="number"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;   
+    border: 1px solid var(--border);
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+#update_report .form-group select,
+#add_report .form-group select,
+#update_person .form-group select,
+#add_person .form-group select{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;   
+    border: 1px solid var(--border);
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+#update_report .form-group .radio,
+#add_report .form-group .radio{
+    margin: 1em 2em;
+}
+
+
+
+#update_report .dates,
+#add_report .dates,
+#update_person .dates,
+#add_person .dates{
+    display: inline-flex;
+    position: relative;
+}
+
+/* style to radio button */
+.radio input[type="radio"]{
+    position: absolute;
+    opacity: 0;
+}
+
+.radio input[type="radio"]+ .radio-label:before{
+    content: "";
+    background: var(--border-btn);
+    border-radius: 100%;
+    border: 1px solid var(--border);
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: -0em;
+    margin-right: .5em;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+
+.radio input[type="radio"]:checked+ .radio-label:before{
+    background-color: #F4D03F;
+    box-shadow: inset 0 0 0 4px #e9ecef;
+}
+
+.radio input[type="radio"]:focus+ .radio-label:before{
+    outline: none;
+    border-color: #F4D03F;
+}
+
+.radio input[type="radio"]:disabled+ .radio-label:before{
+    box-shadow: inset 0 0 0 4px #e9ecef;
+    border-color: #b4b4b4;
+    background: #b4b4b4;
+}
+
+#update_report .form-group .btn,
+#add_report .form-group .btn,
+#update_person .form-group .btn,
+#add_person .form-group .btn{
+    width: 100%;
+    padding: .9em .1em;
+    background-color: #F4D03F;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+}
+
+#update_report .form-group .btn:hover,
+#add_report .form-group .btn:hover,
+#update_person .form-group .btn:hover,
+#add_person .form-group .btn:hover{
+    background-color: var(--dark);
+    color: var(--border);
+}

@@ -1,0 +1,78 @@
+<!-- header -->
+<%- include('include/_header')%>
+<!-- header -->
+
+<!-- /Main site se quito el site-main-->
+<main id="">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/index"><i class="fas fa-angle-double-left"></i>Volver</a>
+            </div>
+        </div>
+        
+        <!-- update person form -->
+        <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md mt-10 form">
+            <h1 class="text-xl font-bold text-blue-900 capitalize dark:text-blue-900 text-center">ACTUALIZAR DATOS DE PERSONA</h1>
+            <form action="/" method="POST" id="update_person">
+                <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="surname_pat">Apellido Paterno</label>
+                        <input type="hidden" name="id" value="<%= person._id %>">
+                        <input id="surname_pat" name="surname_pat" type="text" value="<%= person.surname_pat %>" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Ingrese su apellido paterno">
+                    </div>
+        
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="surname_mat">Apellido Materno</label>
+                        <input id="surname_mat" name="surname_mat" type="text" value="<%= person.surname_mat %>" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Ingrese su apellido materno">
+                    </div>
+        
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="first_names">Nombres Completos</label>
+                        <input id="first_names" name="first_names" type="text" value="<%= person.first_names %>" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Ingrese sus nombres completos">
+                    </div>
+                    
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="document_type">Tipo de Documento</label>
+                        <select name="document_type" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                            <option value="dni"<%= person.document_type == 'dni'?'selected':'' %>>Documento Nacional de Identidad</option>
+                            <option value="ce"<%= person.document_type == 'ce'?'selected':'' %>>Carnet de Extranjería</option>
+                            <option value="otro"<%= person.document_type =='otro'?'selected':'' %>>Otro</option>
+                        </select>
+                    </div>
+        
+                    <div> 
+                        <label class="text-blue-800 dark:text-blue-900" for="document_number">N° Documento</label>
+                        <input id="document_number" name="document_number" type="text" value="<%= person.document_number %>" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="N° Documento">
+                    </div>
+        
+                    <div>
+                        <label class="text-blue-800 dark:text-blue-900" for="mail">Correo</label>
+                        <input id="mail" name="mail" type="email" value="<%= person.mail %>" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Ingrese su correo">
+                    </div>
+        
+                    <div> 
+                        <label class="text-blue-800 dark:text-blue-900" for="phone">Número de Contacto</label>
+                        <input id="phone" name="phone" type="text" value="<%= person.phone %>" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="N° Documento">
+                    </div>
+        
+                    <div> 
+                        <label class="text-blue-800 dark:text-blue-900" for="phone_option">Número de Contacto Opcional</label>
+                        <input id="phone_option" name="phone_option" type="text" value="<%= person.phone %>" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="N° Documento">
+                    </div>
+               
+                </div>
+        
+                <div class="flex justify-center mt-6 save">
+                    <button type="submit" class="update crgrad px-32 py-3 font-bold leading-5 text-gray-200 transition-colors duration-200 transform bg-yellow-600 rounded-md hover:bg-blue-900 focus:outline-none focus:bg-gray-600" id="crgrad">GUARDAR</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+</main>
+<!-- /Main site -->
+
+<!-- footer -->
+<%- include('include/_footer')%>
+<!-- footer -->

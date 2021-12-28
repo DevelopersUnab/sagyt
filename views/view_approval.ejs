@@ -1,0 +1,276 @@
+<!-- header -->
+<%- include('include/_header')%>
+<!-- header -->
+
+<!-- /Main site se quito el site-main-->
+<main id="">
+    <%if(approval.length > 0 ) {%>
+
+        <% approval.forEach(function(approval) { %>
+            
+            <!-- Headboard -->
+            <div class="container">
+                <div class="box-nav d-flex justify-between">
+                    <div class="filter">
+                        <a href="/view-person?id=<%= approval.person._id %>"><i class="fas fa-angle-double-left"></i> volver</a>
+                    </div>
+                </div>
+                <!-- <div class="text-center">
+                    <h1 class="text-dark text-2xl">Registro de egresado</h1>
+                    <span class="text-blue-800 font-bold">En el siguiente puedes visualizar los datos de egresados de la persona</span>
+                </div>             -->
+                
+                <div class="grid justify-between">
+                    <div class="">
+                        <div>
+                            <img src="/img/perfil2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="htext text-dark">
+                            <span class="hname"><%= approval.person.surname_pat+" "+approval.person.surname_mat+", "+approval.person.first_names%></span>
+                            <span>jr. Ramon Castilla n° 584</span>
+                            <span class="dtext"><%= approval.person.mail%></span>
+                            <a href="/update-person?id=<%= approval.person._id %>" class="btn border-shadow update">
+                                <span class="text-gradient">Editar <i class="fas fa-pencil-alt"></i></span>
+                            </a>
+                        </div>
+                        
+                        <div class="d-grid text-dark justify-between">
+                            <div class="d-gridcolumn">
+                                <span class="hdname">DATOS PERSONALES:</span>
+                                <span class="dtext">Doc. Identidad: <%= approval.person.document_number%> </span>
+                                <span class="dtext">Teléfono: <%= approval.person.phone%></span>
+                                
+                            </div>
+                            <div class="d-gridcolumn">
+                                <span class="hdname">CONDICIÓN Y MODALIDAD:</span>
+                                <span class="dtext">Egresado</span>
+                                <span class="dtext">Sustentación</span>
+                            </div>
+                            <div class="d-gridcolumn">
+                                <span class="hdname">ESTADO:</span>
+                                <span class="dtext state">3/7</span>
+                            </div>    
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>   
+            
+            <!-- update report form -->
+            <!-- <div class="new_report">
+                        <div class="form-group">
+                            <label for="code_approval" class="text-blue-800 font-bold">Código Universitario:</label>
+                            <input type="hidden" name="id" value="<%= approval._id %>">
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="school" class="text-blue-800 font-bold">Escuela</label>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="program_academic" class="text-blue-800 font-bold">Programa Académico</label>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="study_plan" class="text-blue-800 font-bold">Plan de Estudios</label>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="approved_credits" class="text-blue-800 font-bold">Créditos aprobados</label>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="date_firstenrollment_unab" class="text-blue-800 font-bold">Fecha de Primera Matrícula en la UNAB</label>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="date_firstenrollment_origen" class="text-blue-800 font-bold">Fecha de Primera Matrícula Universidad de Origen</label>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="date_last_semester" class="text-blue-800 font-bold">Fecha de Último Semestre</label>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="date_egress" class="text-blue-800 font-bold">Fecha de Egreso</label>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="condition" class="text-blue-800 font-bold">Condición</label>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <a href="/update-approval?document_number=<%= approval.person.document_number %>" class="btn border-shadow update">
+                                <span class="text-gradient">Editar <i class="fas fa-pencil-alt"></i></span>
+                            </a>
+                            <a class="btn border-shadow delgrad" data-id=<%= approval._id %>>
+                                <span class="text-gradient">Eliminar<i class="fas fa-times"></i></span>
+                            </a>                    
+                        </div>
+            </div> -->
+    
+            <!-- TABLA VISTA DE INFORMACIÓN -->
+            <div class="max-w-4xl p-6 mx-auto py-8">
+                <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+                    <div class="px-4 py-4 sm:px-6">
+                        <h1 class="text-3xl leading-6 text-gray-900 text-center font-semibold">
+                            Información
+                        </h1>
+                        <p class="text-2xl mt-1 text-blue-800 text-center"> <!-- se quito max-w-2xl -->
+                            Reporte de sustentación y aprobación
+                        </p>
+                    </div>
+                    <div class="border-t border-gray-300">
+                    <dl>
+                        <div class="bg-white px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-lg font-semibold text-blue-700">
+                                Fecha de Sustentación
+                            </dt>
+                            <dd class="mt-1 text-lg text-gray-900 sm:mt-0 sm:col-span-2 sm:text-center">
+                                <%= approval.date_support.substring(0,10) %>
+                            </dd>
+                        </div>
+                        <div class="bg-gray-100 px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-lg font-semibold text-blue-700">
+                                Tipo de Sustentación
+                            </dt>
+                            <dd class="mt-1 text-lg text-gray-900 sm:mt-0 sm:col-span-2 sm:text-center">
+                                <%= approval.type_support %>
+                            </dd>
+                        </div>
+                        <div class="bg-white px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-lg font-semibold text-blue-700">
+                            Título del trabajo de investigación, tesis o trabajo de suficiencia profesional 
+                        </dt>
+                        <dd class="mt-1 text-lg text-gray-900 sm:mt-0 sm:col-span-2 sm:text-center">
+                            <%= approval.title_support %>
+                        </dd>
+                        </div>
+                        <div class="bg-gray-100 px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-lg font-semibold text-blue-700">
+                            Modalidad de sustentación
+                        </dt>
+                        <dd class="mt-1 text-lg text-gray-900 sm:mt-0 sm:col-span-2 sm:text-center">
+                            <%= approval.modality_support %>
+                        </dd>
+                        </div>
+                        <div class="bg-white px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-lg font-semibold text-blue-700">
+                            Originalidad del Trabajo
+                        </dt>
+                        <dd class="mt-1 text-lg text-gray-900 sm:mt-0 sm:col-span-2 sm:text-center">
+                            <%= approval.originality_proyect %>
+                        </dd>
+                        </div>
+                        <div class="bg-gray-100 px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-lg font-semibold text-blue-700">
+                            Aprobación de sustentación
+                        </dt>
+                        <dd class="mt-1 text-lg text-gray-900 sm:mt-0 sm:col-span-2 sm:text-center">
+                            <%= approval.approval_support %>
+                        </dd>
+                        </div>
+                        <!-- <div class="bg-white px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-lg font-medium text-gray-500">
+                                Attachments
+                            </dt>
+                            <dd class="mt-1 text-lg text-gray-900 sm:mt-0 sm:col-span-2">
+                                <ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200">
+                                <li class="pl-3 pr-4 py-3 flex items-center justify-between text-lg">
+                                    <div class="w-0 flex-1 flex items-center">
+                                    COMENTARIO: Heroicon name: solid/paper-clip
+                                    <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="ml-2 flex-1 w-0 truncate">
+                                        resume_back_end_developer.pdf
+                                    </span>
+                                    </div>
+                                    <div class="ml-4 flex-shrink-0">
+                                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+                                        Download
+                                    </a>
+                                    </div>
+                                </li>
+                                <li class="pl-3 pr-4 py-3 flex items-center justify-between text-lg">
+                                    <div class="w-0 flex-1 flex items-center">
+                                    COMENTARIO: Heroicon name: solid/paper-clip
+                                    <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="ml-2 flex-1 w-0 truncate">
+                                        coverletter_back_end_developer.pdf
+                                    </span>
+                                    </div>
+                                    <div class="ml-4 flex-shrink-0">
+                                    <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+                                        Download
+                                    </a>
+                                    </div>
+                                </li>
+                                </ul>
+                            </dd>
+                        </div> -->
+                    </dl>
+                    <div class="w-full py-4 flex justify-center items-center border-t border-gray-300 bg-gray-100 cinta">
+    
+                        <a href="/update-approval?document_number=<%= approval.person.document_number %>" class="inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700">
+                            <i class="fas fa-edit mx-2"></i>Editar
+                        </a>
+                        <a class="cursor-pointer mx-8 inline-block text-center bg-red-700 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-red-500 delapp" data-id=<%= approval._id %>>
+                            <i class="fas fa-trash-alt mx-2"></i> Eliminar
+                        </a>                    
+                        
+                        <!-- <button class="p-2 pl-5 pr-5 transition-colors duration-700 transform bg-indigo-500 hover:bg-blue-400 text-gray-100 text-lg rounded-lg focus:border-4 border-indigo-300">Button</button> -->
+                        <!-- <button class="p-2 pl-5 pr-5 transition-colors duration-700 transform bg-indigo-500 hover:bg-blue-400 text-gray-100 text-lg rounded-lg focus:border-4 border-indigo-300">Button</button> -->
+                        
+                        <!-- <button 
+                            type="button" 
+                            class="px-4 py-3 bg-blue-600 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform mx-5 flex"
+                        >
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+    
+                            <span class="ml-2">Download</span>
+                        </button>
+    
+                        <button 
+                            type="button" 
+                            class="px-4 py-3 bg-blue-600 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-y-75 transition-transform flex"
+                        >
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                            </svg>
+    
+                            <span class="ml-2">Bookmark</span>
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+     
+            
+        <% }); %>
+        
+      <% } else{ %>  
+        <div class="box-nav d-flex justify-between mt-1 container">
+            <div class="filter">
+                <a href="javascript:history.go(-1)"><i class="fas fa-angle-double-left"></i> volver</a>
+            </div>
+        </div>
+        <div class="w-full py-4 flex justify-center items-center cinta">
+            <h1>Aún no hay registros para esta persona ...</h1>
+            <a class="cursor-pointer mx-8 inline-block text-center bg-red-700 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-red-500">
+                Crear Registro 
+            </a>                    
+        </div>
+     <% } %>
+    
+</main>
+<!-- /Main site -->
+
+<!-- footer -->
+    <%- include('include/_footer')%>
+<!-- footer -->

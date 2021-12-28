@@ -1,0 +1,64 @@
+<section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md mt-10 form">
+    <h1 class="text-xl font-bold text-blue-900 capitalize dark:text-blue-900 text-center">REGISTRAR NUEVA PERSONA</h1>
+    <form action="/api/persons" method="POST" id="add_person">
+        <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+            <div>
+                <label class="text-blue-800 dark:text-blue-900" for="surname_pat">Apellido Paterno</label>
+                <input type="hidden" name="id" value="">
+                <input id="surname_pat" name="surname_pat" type="text" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Ingrese su apellido paterno">
+            </div>
+
+            <div>
+                <label class="text-blue-800 dark:text-blue-900" for="surname_mat">Apellido Materno</label>
+                <input type="hidden" name="id" value="">
+                <input id="surname_mat" name="surname_mat" type="text" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Ingrese su apellido materno">
+            </div>
+
+            <div>
+                <label class="text-blue-800 dark:text-blue-900" for="first_names">Nombres Completos</label>
+                <input type="hidden" name="id" value="">
+                <input id="first_names" name="first_names" type="text" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Ingrese sus nombres completos">
+            </div>
+            
+            <div>
+                <label class="text-blue-800 dark:text-blue-900" for="document_type">Tipo de Documento</label>
+                <input type="hidden" name="id" value="">
+                <select name="document_type" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                    <option value="">Seleccione</option>
+                    <option value="dni">Documento Nacional de Identidad</option>
+                    <option value="ce">Carnet de Extranjería</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div> 
+                <label class="text-blue-800 dark:text-blue-900" for="document_number">N° Documento</label>
+                <input type="hidden" name="id" value="">
+                <input id="document_number" name="document_number" type="text" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="N° Documento">
+            </div>
+
+            <div>
+                <label class="text-blue-800 dark:text-blue-900" for="mail">Correo</label>
+                <input type="hidden" name="id" value="">
+                <input id="mail" name="mail" type="email" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="Ingrese su correo">
+            </div>
+
+            <div> 
+                <label class="text-blue-800 dark:text-blue-900" for="phone">Número de Contacto</label>
+                <input type="hidden" name="id" value="">
+                <input id="phone" name="phone" type="text" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="N° Documento">
+            </div>
+
+            <div> 
+                <label class="text-blue-800 dark:text-blue-900" for="phone_option">Número de Contacto Opcional</label>
+                <input type="hidden" name="id" value="">
+                <input id="phone_option" name="phone_option" type="text" class="block w-full px-4 py-2 mt-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" placeholder="N° Documento">
+            </div>
+       
+        </div>
+
+        <div class="flex justify-center mt-6 save">
+            <button type="submit" class="update crgrad px-32 py-3 font-bold leading-5 text-gray-200 transition-colors duration-200 transform bg-blue-900 rounded-md hover:bg-yellow-600 focus:outline-none focus:bg-gray-600" id="crgrad">GUARDAR</button>
+        </div>
+    </form>
+</section>

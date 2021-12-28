@@ -1,0 +1,37 @@
+<!-- header -->
+<%- include('include/_header')%>
+<!-- header -->
+
+<!-- /Main site se quito el site-main-->
+<main id="">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/view-person?id=<%= persons._id %>"><i class="fas fa-angle-double-left"></i> volver</a>
+            </div>
+        </div>
+        <%- include('include/_headboard')%>
+
+        <!-- <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="javascript: history.go(-1)"><i class="fas fa-angle-double-left"></i>Todos Egresados</a>
+            </div>
+        </div> -->
+        <!-- <div class="form-title text-center">
+            <h2 class="text-dark">Nuevo Egresado</h2>
+            <span class="text-blue-700">Utiliza el siguiente formulario para registrar un nuevo egresado</span>
+        </div> -->
+        
+        <!-- add report form -->
+        <%- include('include/_form')%>
+    
+    </div>
+</main>   
+    
+
+
+<!-- /Main site -->
+
+<!-- footer -->
+    <%- include('include/_footer')%>
+<!-- footer -->

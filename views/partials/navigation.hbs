@@ -1,0 +1,61 @@
+<nav class="felx flex-1 navbar navbar-expand-lg navbar-ligth bg-ligth">
+        <div class="container">
+            <a class="navbar-brand" href="/index">
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.1562 41.9955H9.84375C4.41591 41.9955 0 37.5796 0 32.1518V18.3483C0 15.2975 1.44826 
+                12.3715 3.87401 10.5213L15.0303 2.01226C18.5452 -0.668598 23.4548 -0.668598 26.9697 2.01226L30.5156 4.71437V2.62053C30.6022 
+                0.443745 33.711 0.445386 33.7969 2.62053V8.02729C33.7969 8.65097 33.4432 9.22068 32.8843 9.49753C32.3253 9.77431 31.6578 9.71016 
+                31.1618 9.33224L24.9803 4.62176C22.6365 2.83414 19.3633 2.83414 17.0201 4.62135L5.86384 13.1304C4.24676 14.3637 3.28125 16.3143 3.28125 
+                18.3483V32.1518C3.28125 35.7703 6.22519 38.7143 9.84375 38.7143H32.1562C35.7748 38.7143 38.7188 35.7703 38.7188 32.1518V18.3483C38.7188 16.2894 
+                37.7642 14.3321 36.1652 13.1125C35.4447 12.563 35.3062 11.5335 35.8557 10.8131C36.4052 10.0926 37.4348 9.95404 38.1551 10.5036C40.5626 12.3398 42 15.2724 42 
+                18.3483V32.1518C42 37.5796 37.5841 41.9955 32.1562 41.9955ZM17.7188 18.9447C16.5861 18.9447 15.668 19.8629 15.668 20.9955C15.7763 23.7165 19.6622 23.7145 19.7695 
+                20.9955C19.7695 19.8628 18.8514 18.9447 17.7188 18.9447ZM26.332 20.9954C26.2237 23.7164 22.3378 23.7144 22.2305 20.9954C22.3388 18.2745 26.2247 18.2766 26.332 20.9954ZM19.7695 
+                27.5579C19.6612 30.2789 15.7753 30.2769 15.668 27.5579C15.7763 24.837 19.6622 24.8391 19.7695 27.5579ZM26.332 27.5579C26.2237 30.2789 22.3378 30.2769 22.2305 
+                27.5579C22.3388 24.837 26.2247 24.8391 26.332 27.5579Z" fill="#D1B44A"/>
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Registros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index">dato prueba</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-md-auto"> <!-- PARA IZQUEIRDA NUEVO ms-md-auto -->
+                    {{#if user}}
+                        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                        </form>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ajustes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/index">Personas</a></li>
+                                <li><a class="dropdown-item" href="/persons/add">Crear Persona</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/notes">Registros</a></li>
+                                <li><a class="dropdown-item" href="/notes/add">Nuevo Registro</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/users/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    {{else}}                        
+                        <div class="text-end">
+                            <a class="btn btn-outline-light me-2" href="/users/signin">Login</a>
+                            <a class="btn btn-warning" href="/users/signup">Sign-up</a>
+                        </div>
+                    {{/if}}                            
+                </ul>
+            </div>
+        </div>
+</nav>

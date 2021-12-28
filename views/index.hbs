@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAGYT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">Sistema de Gestión de Reportes</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+<!-- /Header -->
+
+<!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">Nuevo Registro<i class="fas fa-user"></i></span>
+                </a>
+            </div>
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Tipo Documento</th>
+                            <th>N° Documento</th>
+                            <th>Nombres Completos</th>
+                            <th>Correo</th>
+                            <th>Teléfono</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dni</td>
+                            <td>78945612</td>
+                            <td>Alexis Arce Rivas</td>
+                            <td>larce@gmail.com</td>
+                            <td>978456123</td>
+                            <td>
+                                <a href="" class="btn border-shadow update">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                </a>
+                                <a class="btn border-shadow delete">
+                                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+
+            <div class="box-nav d-flex justify-between">
+                <a href="add_graduate.html" class="btn border-shadow update" title="egresados">
+                    <span class="text-gradient galery"><i class="fas fa-graduation-cap"></i></span>
+                </a>
+                <a href="add_support_approval.html" class="btn border-shadow update" title="sustentación">
+                    <span class="text-gradient galery"><i class="fas fa-file"></i></span>
+                </a>
+                <a href="add_physical_submit.html" class="btn border-shadow update" title="entrega física">
+                    <span class="text-gradient galery"><i class="fas fa-book"></i></span>
+                </a>
+                <a href="add_digital_submit.html" class="btn border-shadow update" title="entrega digital">
+                    <span class="text-gradient galery"><i class="fas fa-link"></i></span>
+                </a>
+                <a href="add_payments.html" class="btn border-shadow update" title="pago">
+                    <span class="text-gradient galery"><i class="fas fa-money-bill"></i></span>
+                </a>
+                <a href="add_debits.html" class="btn border-shadow update" title="adeudo">
+                    <span class="text-gradient galery"><i class="fas fa-scroll"></i></span>
+                </a>
+                <a href="add_language.html" class="btn border-shadow update" title="idioma">
+                    <span class="text-gradient galery"><i class="fas fa-globe"></i></span>
+                </a>
+
+            </div>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+<!-- Footer -->
+<!-- /Footer -->
+</body>
+</html>

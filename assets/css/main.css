@@ -1,0 +1,23 @@
+body{
+    
+    background-image: url('../img/fondo.png');
+
+}
+
+.logo{
+    width: 60%;
+}
+
+.ms-auth-bg{
+    position: relative;
+    height: 100%;
+    background-image: url('../img/people/people-6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.save-register{
+    background-color: #e7bf2b;
+    color: #ffff;
+}

@@ -147,7 +147,7 @@ $("#update_person").submit(function(event){
     console.log(data);
 
     var request = {
-        "url" : `http://localhost:3001/api/persons/${data.id}`,
+        "url" : `http://sagyt.unab.edu.pe/api/persons/${data.id}`,
         "method" : "PUT",
         "data": data
     }

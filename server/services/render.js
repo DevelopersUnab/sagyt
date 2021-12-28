@@ -64,7 +64,7 @@ exports.add_person = (req, res)=>{
 }
 
 exports.update_person = (req, res)=>{
-    axios.get('http://localhost:3001/api/persons', {params:{id:req.query.id}})
+    axios.get('http://sagyt.unab.edu.pe/api/persons', {params:{id:req.query.id}})
         .then(function(persondata){
             res.render("update_person", {person:persondata.data})
         })

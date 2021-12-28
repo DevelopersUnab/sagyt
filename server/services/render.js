@@ -116,7 +116,7 @@ exports.update_approval = (req, res)=>{
 }
 
 
-//agregado por pedro => para dar HOME
+//agregado por pedro => para dar HOMEe
 exports.homeHome = (req, res)=>{
     res.render('home.hbs');
 };

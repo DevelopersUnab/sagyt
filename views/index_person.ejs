@@ -3,109 +3,7 @@
 <!-- header -->
 
     <!-- Main Site -->
-
-    <!-- se rempleza <main id="site-main"></main> *POR ARTICLE -->
-                <!-- <div class="container">
-                        <div class="gridopt d-flex">
-                            <div class="d-gridmain">
-                                <div>
-                                    <a href="/add-report?id=<%= persons._id %>" class="opt upgrad" title="egresados"
-                                        data-id=<%=persons._id %>>
-                                        <span class="text-gradient galery text-center"><i
-                                                class="fas fa-graduation-cap"></i></span>
-                                        <span class="galerytext text-gradient">Reporte de Egresado</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="d-gridopt">
-                                <div class="d-gridoptsub">
-                                    <a href="/view-graduate?document_number=<%= persons.document_number %>" class="opt">
-                                        <span class="text-gradient galerysub text-center"><i class="fas fa-eye"></i></span>
-                                    </a>
-                                </div>
-
-                                <div class="d-gridoptsub">
-                                    <a href="/update-graduate?document_number=<%= persons.document_number %>" class="opt">
-                                        <span class="text-gradient galerysub text-center"><i
-                                                class="fas fa-pencil-alt"></i></span>
-                                    </a>
-                                </div>
-
-                                <div class="d-gridoptsub">
-                                    <a href="add_support_approval.html" class="opt">
-                                        <span class="text-gradient galerysub text-center"><i class="fas fa-times"></i></span>
-                                    </a>
-                                </div>
-
-                            </div>
-
-                        </div>
-                </div> -->
-                
-                <!-- Sustentación -->
-                    <!-- <div class="gridopt d-flex">
-                        <div class="d-gridmain">
-                            <div>
-                                <a href="/add-approval?id=<%= persons._id %>" class="opt upapproval" title="egresados" data-id=<%=persons._id %>>
-                                    <span class="text-gradient galery text-center"><i class="fas fa-file"></i></span>
-                                    <span class="galerytext text-gradient">Reporte de Sustentación</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="d-gridopt">
-                            <div class="d-gridoptsub">
-                                <a href="" class="opt">
-                                    <span class="text-gradient galerysub text-center"><i class="fas fa-eye"></i></span>
-                                </a>
-                            </div>
-
-                            <div class="d-gridoptsub">
-                                <a href="add_support_approval.html" class="opt">
-                                    <span class="text-gradient galerysub text-center"><i
-                                            class="fas fa-pencil-alt"></i></span>
-                                </a>
-                            </div>
-
-                            <div class="d-gridoptsub">
-                                <a href="add_support_approval.html" class="opt">
-                                    <span class="text-gradient galerysub text-center"><i class="fas fa-times"></i></span>
-                                </a>
-                            </div>
-
-                        </div>
-
-                    </div> -->
-                <!-- Sustentación -->
-
-                <!-- CINTA ORIGINAL -->
-                    <!-- <div class="box-nav d-flex justify-between">
-                    <a href="/add-report?id=<%= persons._id %>" class="btn border-shadow upgrad opt" title="egresados" data-id=<%= persons._id %>>
-                        <span class="text-gradient galery"><i class="fas fa-graduation-cap"></i></span>
-                    </a>
-                    <a href="add_support_approval.html" class="btn border-shadow update opt" title="sustentación">
-                        <span class="text-gradient galery"><i class="fas fa-file"></i></span>
-                    </a>
-                    <a href="add_physical_submit.html" class="btn border-shadow update opt" title="entrega física">
-                        <span class="text-gradient galery"><i class="fas fa-book"></i></span>
-                    </a>
-                    <a href="add_digital_submit.html" class="btn border-shadow update opt" title="entrega digital">
-                        <span class="text-gradient galery"><i class="fas fa-link"></i></span>
-                    </a>
-                    <a href="add_payments.html" class="btn border-shadow update opt" title="pago">
-                        <span class="text-gradient galery"><i class="fas fa-money-bill"></i></span>
-                    </a>
-                    <a href="add_debits.html" class="btn border-shadow update opt" title="adeudo">
-                        <span class="text-gradient galery"><i class="fas fa-scroll"></i></span>
-                    </a>
-                    <a href="add_language.html" class="btn border-shadow update opt" title="idioma">
-                        <span class="text-gradient galery"><i class="fas fa-globe"></i></span>
-                    </a>
-                    </div> -->
-                <!-- CINTA ORIGINAL -->
-
-
-        
-    
+   
     <article> 
         <div class="container">
             <div class="box-nav d-flex justify-between mt-1">
@@ -117,21 +15,23 @@
             <%- include('include/_headboard')%>
         </div>
         <div class="mt-10 mb-10">
-            <h1 class="text-gray-800 text-center font-bold text-6xl">SAGYT</h1>
+            <h1 class="text-gray-800 text-center font-bold text-6xl">Sistema Administrativo de Grados y Títulos</h1>
             <div class="md:w-4/4 mt-10">
                 <div class="max-w-4/4 mx-auto md:flex">
                     <!-- CUADRO 1 -->
                     <div class="px-8 mb-2 mt-auto">
                         <div class="mx-auto bg-white pt-4 rounded-xl space-y-6 overflow-hidden transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 shadow-xl hover:shadow-2xl cursor-pointer">
                             <div class="px-8 flex justify-between items-center">
-                                <h4 class="text-xl font-bold text-gray-800">Egresado</h1>
-                                <!-- <a class="cursor-pointer text-blue-900 w-10 h-10" target="_blank" href="#"><i class="fas fa-eye"></i></a> -->
-                                <a href="/view-graduate?document_number=<%= persons.document_number %>" class="cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <title>Ver</title>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </a> 
+                                <h1 class="text-2xl font-bold text-gray-800">Datos de Egresado</h1>                        
+                                <a href="/view-graduate?document_number=<%= persons.document_number %>" class="update">
+                                    <div class="w-12 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <title>Ver</title>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        </svg>
+                                    </div>
+                                </a>
                             </div>
                             <div class="px-20 mx-20 content-center object-cover">
                                 <svg viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -186,14 +86,16 @@
                     <div class="px-12 mb-2 mt-auto">
                         <div class="mx-auto bg-white pt-4 rounded-xl space-y-6 overflow-hidden transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 shadow-xl hover:shadow-2xl">
                             <div class="px-8 flex justify-between items-center">
-                                <h4 class="text-xl font-bold text-gray-800">Sustentación</h1>
-                                <!-- <a class="cursor-pointer text-blue-900 w-10 h-10" target="_blank" href="#"><i class="fas fa-eye"></i></a> -->
-                                <a href="/view-approval?document_number=<%= persons.document_number %>" class="cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <title>Ver</title>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </a>                                         
+                                <h1 class="text-2xl font-bold text-gray-800">Datos de Sustentación</h1>
+                                <a href="/view-approval?document_number=<%= persons.document_number %>" class="update">
+                                    <div class="w-12 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <title>Ver</title>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                        </svg>
+                                    </div>
+                                </a>                                       
                             </div>
                             <div class="px-20 mx-20 content-center object-cover">
                                 <svg viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -246,7 +148,6 @@
                         <div class="mx-auto bg-white pt-4 rounded-xl space-y-6 overflow-hidden transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 shadow-xl hover:shadow-2xl cursor-pointer">
                             <div class="px-8 flex justify-between items-center">
                                 <h4 class="text-xl font-bold text-gray-800">form-3</h1>
-                                <!-- <a class="cursor-pointer text-blue-900 w-10 h-10" target="_blank" href="#"><i class="fas fa-eye"></i></a> -->
                                 <a href="" target="_blank" class="cursor-pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <title>Ver</title>
@@ -273,16 +174,12 @@
                                     <path d="M19.1204 18.052L18.256 18.9158L22.1435 22.8048L23.0078 21.9411L19.1204 18.052Z" fill="#524C6F"/>
                                 </svg>
                             </div>
-                            <!-- <h1 class="text-4xl text-center font-bold">$10.00</h1> -->
                             <p class="px-4 text-center text-sm ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem</p>
                             <ul class="text-center">
                                 <li><a href="#" class="font-semibold">It is a long established</a></li>
                                 <li><a href="#" class="font-semibold">It is a long established</a></li>
                                 <li><a href="#" class="font-semibold">It is a long established</a></li>
                             </ul>
-                            <!-- <div class="text-center bg-gray-200">
-                                <button class="inline-block my-6 font-bold text-gray-800 rounded-md px-10 py-2 transition-colors w-full">Get started today</button>
-                            </div> -->
                             <a href="#" class="w-full inline-block my-6 font-bold px-10 py-4 p-2 pl-5 pr-5 text-center
                                             transition-colors duration-700 transform bg-blue-900 hover:bg-yellow-700 text-lg
                                             focus:border-4 border-yellow-300 text-white rounded-sm"> <!-- block text-center w-full antes y despues de mt-4 => p-2 pl-5 pr-5 transition-colors duration-700 transform bg-indigo-500 hover:bg-blue-400 text-gray-100 text-lg rounded-lg focus:border-4 border-indigo-300 -->

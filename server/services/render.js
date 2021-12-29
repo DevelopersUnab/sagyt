@@ -1,13 +1,8 @@
 const axios = require('axios')
 
-var URL = window.location.host;
-if(URL == null){
-    URL = 'localhost:3001'
-}
-
 exports.homeRoutes = (req, res)=>{
     //Make a get request to /api/reports
-    axios.get('http://localhost:3001/api/persons')
+    axios.get('http://sagyt.unab.edu.pe/api/persons')
     .then(function(response){
         res.render('index', {persons:response.data});
     })
@@ -21,7 +16,7 @@ exports.homeRoutes = (req, res)=>{
 // };
 
 exports.view_fgcreate = (req, res)=>{
-    axios.get('http://localhost:3001/api/persons', {params:{id:req.query.id}})
+    axios.get('http://sagyt.unab.edu.pe/api/persons', {params:{id:req.query.id}})
     .then(function(response){
         res.render('add_report', {persons:response.data});
     })
@@ -31,7 +26,7 @@ exports.view_fgcreate = (req, res)=>{
 }
 
 exports.view_graduate = (req, res)=>{
-    axios.get('http://localhost:3001/api/reportsbyperson', {params:{document_number:req.query.document_number}})
+    axios.get('http://sagyt.unab.edu.pe/api/reportsbyperson', {params:{document_number:req.query.document_number}})
     .then(function(response){
         // console.log(response.data)
         res.render('view_report', {graduate:response.data});
@@ -43,7 +38,7 @@ exports.view_graduate = (req, res)=>{
 }
 
 exports.update_graduate = (req, res)=>{
-    axios.get('http://localhost:3001/api/reportsbyperson', {params:{document_number:req.query.document_number}})
+    axios.get('http://sagyt.unab.edu.pe/api/reportsbyperson', {params:{document_number:req.query.document_number}})
     .then(function(response){
         // console.log(response.data)
         res.render('update_report', {graduate:response.data});
@@ -55,7 +50,7 @@ exports.update_graduate = (req, res)=>{
 }
 
 exports.view_person = (req, res)=>{
-    axios.get('http://localhost:3001/api/persons', {params:{id:req.query.id}})
+    axios.get('http://sagyt.unab.edu.pe/api/persons', {params:{id:req.query.id}})
     .then(function(response){
         res.render('index_person', {persons:response.data});
     })
@@ -70,7 +65,7 @@ exports.add_person = (req, res)=>{
 
 exports.update_person = (req, res)=>{
     
-    axios.get('http://${URL}/api/persons', {params:{id:req.query.id}})
+    axios.get('http://69.10.32.70/api/persons', {params:{id:req.query.id}})
         .then(function(persondata){
             res.render("update_person", {person:persondata.data})
         })
@@ -88,7 +83,7 @@ exports.add_approval = (req, res)=>{
 }
 
 exports.view_fgapproval = (req, res)=>{
-    axios.get('http://localhost:3001/api/persons', {params:{id:req.query.id}})
+    axios.get('http://sagyt.unab.edu.pe/api/persons', {params:{id:req.query.id}})
     .then(function(response){
         res.render('add_approval', {persons:response.data});
     })
@@ -98,7 +93,7 @@ exports.view_fgapproval = (req, res)=>{
 }
 
 exports.view_approval = (req, res)=>{
-    axios.get('http://localhost:3001/api/approvalsbyperson', {params:{document_number:req.query.document_number}})
+    axios.get('http://sagyt.unab.edu.pe/api/approvalsbyperson', {params:{document_number:req.query.document_number}})
     .then(function(response){
         // console.log(response.data)
         res.render('view_approval', {approval:response.data});
@@ -110,7 +105,7 @@ exports.view_approval = (req, res)=>{
 }
 
 exports.update_approval = (req, res)=>{
-    axios.get('http://localhost:3001/api/approvalsbyperson', {params:{document_number:req.query.document_number}})
+    axios.get('http://sagyt.unab.edu.pe/api/approvalsbyperson', {params:{document_number:req.query.document_number}})
     .then(function(response){
         // console.log(response.data)
         res.render('update_approval', {approval:response.data});

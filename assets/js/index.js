@@ -1,7 +1,7 @@
-var URL = window.location.host;
-if(URL == null){
-    URL = 'localhost:3001'
-}
+// var URL = '69.10.32.70';
+// if(URL == null){
+//     URL = 'sagyt.unab.edu.pe'
+// }
 
 $("#add_report").submit(function(event){
     event.preventDefault();
@@ -16,7 +16,7 @@ $("#add_report").submit(function(event){
     console.log(data);
 
     var request = {
-        "url" : `http://localhost:3001/api/reports`,
+        "url" : `http://sagyt.unab.edu.pe/api/reports`,
         "method" : "POST",
         "data": data
     }
@@ -64,7 +64,7 @@ $("#add_approval").submit(function(event){
     console.log(data);
 
     var request = {
-        "url" : `http://localhost:3001/api/approvals`,
+        "url" : `http://sagyt.unab.edu.pe/api/approvals`,
         "method" : "POST",
         "data": data
     }
@@ -93,7 +93,7 @@ $("#update_approval").submit(function(event){
     console.log(data);
 
     var request = {
-        "url" : `http://localhost:3001/api/approvals/${data.id}`,
+        "url" : `http://sagyt.unab.edu.pe/api/approvals/${data.id}`,
         "method" : "PUT",
         "data": data
     }
@@ -122,7 +122,7 @@ $("#update_report").submit(function(event){
     console.log(data);
 
     var request = {
-        "url" : `http://localhost:3001/api/reports/${data.id}`,
+        "url" : `http://sagyt.unab.edu.pe/api/reports/${data.id}`,
         "method" : "PUT",
         "data": data
     }
@@ -152,7 +152,7 @@ $("#update_person").submit(function(event){
     console.log(data);
 
     var request = {
-        "url" : `http://${URL}/api/persons/${data.id}`,
+        "url" : `http://sagyt.unab.edu.pe/api/persons/${data.id}`,
         "method" : "PUT",
         "data": data
     }
@@ -174,7 +174,7 @@ $('#prueba a.delete').click(function(event){
     var id = $(this).attr("data-id")
 
     var request = {
-        "url" : `http://localhost:3001/api/persons/${id}`,
+        "url" : `http://sagyt.unab.edu.pe/api/persons/${id}`,
         "method" : "DELETE",
     }
 
@@ -217,7 +217,7 @@ if(window.location.pathname=="/view-person"){
         var id = $(this).attr("data-id") //attribute defined in file _show.ejs
 
         var request = {
-            "url" : `http://localhost:3001/api/reports/assignperson/${id}`,
+            "url" : `http://sagyt.unab.edu.pe/api/reports/assignperson/${id}`,
             "method" : "PUT",
             "data": data
         }
@@ -238,7 +238,7 @@ if(window.location.pathname=="/view-person"){
         var id = $(this).attr("data-id") //attribute defined in file _show.ejs
 
         var request = {
-            "url" : `http://localhost:3001/api/approvals/assignperson/${id}`,
+            "url" : `http://sagyt.unab.edu.pe/api/approvals/assignperson/${id}`,
             "method" : "PUT",
             "data": data
         }
@@ -259,7 +259,7 @@ if(window.location.pathname=="/view-person"){
 //         var id = $(this).attr("data-id") //attribute defined in file _show.ejs
 
 //         var request = {
-//             "url" : `http://localhost:3001/api/persons/${id}`,
+//             "url" : `http://sagyt.unab.edu.pe/api/persons/${id}`,
 //             "method" : "DELETE",
 //         }
 
@@ -287,7 +287,7 @@ if(window.location.pathname=="/view-graduate"){
         var id = $(this).attr("data-id") //attribute defined in file _show.ejs
 
         var request = {
-            "url" : `http://localhost:3001/api/reports/${id}`,
+            "url" : `http://sagyt.unab.edu.pe/api/reports/${id}`,
             "method" : "DELETE",
         }
 
@@ -334,7 +334,7 @@ if(window.location.pathname=="/view-approval"){
         var id = $(this).attr("data-id") //attribute defined in file _show.ejs
 
         var request = {
-            "url" : `http://localhost:3001/api/approvals/${id}`,
+            "url" : `http://sagyt.unab.edu.pe/api/approvals/${id}`,
             "method" : "DELETE",
         }
 

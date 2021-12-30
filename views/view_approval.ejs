@@ -20,7 +20,7 @@
                     <span class="text-blue-800 font-bold">En el siguiente puedes visualizar los datos de egresados de la persona</span>
                 </div>             -->
                 
-                <div class="grid justify-between">
+                <!-- <div class="grid justify-between">
                     <div class="">
                         <div>
                             <img src="/img/perfil2.jpg" alt="">
@@ -54,6 +54,21 @@
                             </div>    
                         </div>
                         
+                    </div>
+                </div> -->
+
+
+                <div class="headboard">
+                    <div>
+                        <div class="htext text-dark" style="text-align: center">
+                            <span class="hname"><%= graduate.person.surname_pat+" "+graduate.person.surname_mat+", "+graduate.person.first_names%></span>
+                            <span class="dtext">Doc. Identidad: <%= graduate.person.document_number%></span>
+                            <span class="dtext">Teléfono: <%= graduate.person.phone%></span>
+                            <span class="dtext"><%= graduate.person.mail%></span>
+                            <a href="/update-person?id=<%= graduate.person._id %>" class="btn border-shadow update">
+                                <span class="text-gradient">Editar <i class="fas fa-pencil-alt"></i></span>
+                            </a>
+                        </div>             
                     </div>
                 </div>
             </div>   

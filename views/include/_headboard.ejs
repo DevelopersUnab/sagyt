@@ -1,21 +1,22 @@
 
-<div class="grid justify-between">
+<!-- <div class="grid justify-between">
         <div class="">
             <div>
                 <img src="/img/perfil2.jpg" alt="">
             </div>
-        </div>
+        </div> 
         <div>
-            <div class="htext text-dark">
+            <div class="htext text-dark" style="text-align: center">
                 <span class="hname"><%= persons.surname_pat+" "+persons.surname_mat+", "+persons.first_names%></span>
-                <span>jr. Ramon Castilla n° 584</span>
+                <span class="dtext">Doc. Identidad: <%= persons.document_number%></span>
+                <span class="dtext">Teléfono: <%= persons.phone%></span>
                 <span class="dtext"><%= persons.mail%></span>
                 <a href="/update-person?id=<%= persons._id %>" class="btn border-shadow update">
                     <span class="text-gradient">Editar <i class="fas fa-pencil-alt"></i></span>
                 </a>
-            </div>
+            </div> -->
             
-            <div class="d-grid text-dark justify-between">
+            <!-- <div class="d-grid text-dark justify-between">
                 <div class="d-gridcolumn">
                     <span class="hdname">DATOS PERSONALES:</span>
                     <span class="dtext">Doc. Identidad: <%= persons.document_number%></span>
@@ -31,7 +32,22 @@
                     <span class="hdname">ESTADO:</span>
                     <span class="dtext state">3/7</span>
                 </div>    
-            </div>
+            </div> -->
             
-        </div>
+        <!-- </div>
+</div> -->
+
+
+<div class="headboard">
+    <div>
+        <div class="htext text-dark" style="text-align: center">
+            <span class="hname"><%= persons.surname_pat+" "+persons.surname_mat+", "+persons.first_names%></span>
+            <span class="dtext">Doc. Identidad: <%= persons.document_number%></span>
+            <span class="dtext">Teléfono: <%= persons.phone%></span>
+            <span class="dtext"><%= persons.mail%></span>
+            <a href="/update-person?id=<%= persons._id %>" class="btn border-shadow update">
+                <span class="text-gradient">Editar <i class="fas fa-pencil-alt"></i></span>
+            </a>
+        </div>             
+    </div>
 </div>

@@ -61,11 +61,11 @@
                 <div class="headboard">
                     <div>
                         <div class="htext text-dark" style="text-align: center">
-                            <span class="hname"><%= graduate.person.surname_pat+" "+graduate.person.surname_mat+", "+graduate.person.first_names%></span>
-                            <span class="dtext">Doc. Identidad: <%= graduate.person.document_number%></span>
-                            <span class="dtext">Teléfono: <%= graduate.person.phone%></span>
-                            <span class="dtext"><%= graduate.person.mail%></span>
-                            <a href="/update-person?id=<%= graduate.person._id %>" class="btn border-shadow update">
+                            <span class="hname"><%= approval.person.surname_pat+" "+approval.person.surname_mat+", "+approval.person.first_names%></span>
+                            <span class="dtext">Doc. Identidad: <%= approval.person.document_number%></span>
+                            <span class="dtext">Teléfono: <%= approval.person.phone%></span>
+                            <span class="dtext"><%= approval.person.mail%></span>
+                            <a href="/update-person?id=<%= approval.person._id %>" class="btn border-shadow update">
                                 <span class="text-gradient">Editar <i class="fas fa-pencil-alt"></i></span>
                             </a>
                         </div>             
